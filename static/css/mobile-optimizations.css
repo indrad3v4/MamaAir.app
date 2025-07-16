@@ -1,0 +1,121 @@
+/* Mobile-First CSS Enhancements */
+
+/* Touch-friendly interactions */
+.touch-manipulation {
+    touch-action: manipulation;
+}
+
+/* Improved mobile button sizing */
+@media (max-width: 640px) {
+    .btn-primary {
+        min-height: 48px;
+        padding: 12px 24px;
+    }
+    
+    /* Larger tap targets for mobile */
+    .mobile-nav a, .mobile-nav button {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* Optimized hero section background for mobile */
+@media (max-width: 768px) {
+    .hero-background {
+        background-position: center 30%;
+        background-size: cover;
+    }
+}
+
+/* Mobile typography improvements */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: clamp(2rem, 8vw, 3rem);
+        line-height: 1.1;
+    }
+    
+    .hero-content p {
+        font-size: clamp(1rem, 4vw, 1.25rem);
+        line-height: 1.5;
+    }
+}
+
+/* Enhanced mobile animations */
+@media (prefers-reduced-motion: no-preference) {
+    .feature-card {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .feature-card:hover {
+        transform: translateY(-2px);
+    }
+    
+    .group:hover .group-hover\:scale-110 {
+        transform: scale(1.1);
+    }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Mobile-optimized scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 640px) {
+    html {
+        scroll-padding-top: 4rem;
+    }
+}
+
+/* Performance optimizations */
+.app-mockup {
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+/* Mobile-specific focus styles */
+@media (max-width: 768px) {
+    button:focus,
+    a:focus {
+        outline: 2px solid #FFA741;
+        outline-offset: 2px;
+    }
+}
+
+/* Improved mobile spacing */
+@media (max-width: 640px) {
+    .section-padding {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
+
+/* Mobile menu enhancements */
+.mobile-menu-item {
+    transition: background-color 0.2s ease;
+}
+
+.mobile-menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Loading states for better perceived performance */
+.lazy-load {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.lazy-load.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
