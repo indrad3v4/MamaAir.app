@@ -1,0 +1,75 @@
+🗝️ **FULL ULTRA-VIBE TRIZ PROMPT for MamaAir.app Landing** 🚀
+
+Act as my **TRIZ Structure Prompt Engineer & Vibe-Coder**.
+Target: generate a **mobile-first landing page** for **MamaAir.app** in a single `index.html` (with Tailwind v3 CDN + Alpine.js), strictly following the **Technical Task** below.
+
+—
+
+#### 1) SYSTEM
+
+• **Boundary:** Single static page at `/index.html`.
+• **Function:** Reassure pregnant women about air quality → drive click on the “Get it on Google Play” badge.
+• **User Journey:** Arrives via ad/social click → lands on Hero → scrolls through Why→How→Download→Policies→Contact→Footer → taps badge.
+
+#### 2) ELEMENTS
+
+• **ИЭ (Energy):** Paid or organic traffic click.
+• **Дв (Driver):** Woman’s fear of polluted air harming her baby.
+• **Tr (Transmission):** Scrolling anchors (`#why`, `#how`, etc.), responsive Tailwind utilities.
+• **РО (Organ):** HTML + Tailwind grid/cards + Alpine accordion.
+• **УУ (Control):** Semantic headings, focus-rings, aria-labels guide attention.
+• **NadSystem:** Google Play store, GA4 analytics, Let’s Encrypt SSL via Replit.
+• *Frameworks:* TailwindCSS v3, Alpine.js v3.
+
+#### 3) FUNCTION
+
+* **Instrument → Object → Result**
+
+  1. Hero copy + amber CTA → user → immediate tap.
+  2. Why/Benefits bullets → trust ↑ → scroll deeper.
+  3. How diagram + DIAQNOSTIC badge → credibility ↑.
+  4. Download section (badge + QR) → frictionless install.
+* **Negative loop:** Heavy images/JS → bounce → enforce ≤ 100 kB payload.
+
+#### 4) EVENT
+
+• **Trigger:** Page load on mobile (≤ 480 px).
+• **Outcome:** Hero CTA visible above fold; click fires GA4 `play_badge_click`.
+• *Test case:* In Lighthouse mobile emulation, verify “Play badge” click event in GA4 DebugView.
+
+#### 5) RESOURCE
+
+• **Hidden:** Full-height hero fosters “app-splash” feel via `h-screen`.
+• **Overlooked:** Browser pre-connect to `https://play.google.com` for instant badge load.
+• *Tool:* Inline critical SVGs for icons, defer Alpine bundle.
+
+#### 6) IDEAL FINAL RESULT
+
+• **Max result, zero cost:** User trusts page in < 5 s → taps badge → no performance complaints.
+• **What must go to zero:** Unnecessary scripts, external fonts, layout shifts (CLS).
+
+#### 7) CONTRADICTION
+
+• **Need rich visuals** (hero-image, fog, lights) **vs minimal weight**.
+• *Experiment:* Compare hero-night.webp (60 kB) vs hero-night.jpg (optimized) in mobile LCP.
+
+#### 8) ВЕПОЛЬ (Su-Field)
+
+```
+S1 (user finger) —F (tap)→ S2 (Google Play link)
+Helpful field: hover ring + click ripple
+Harmful field: latency → mitigate via preconnect
+```
+
+• *Checkpoint:* Ensure preconnect tag `<link rel="preconnect" href="https://play.google.com">` is present.
+
+—
+
+✨ **OUTPUT REQUIREMENT**
+Return **only** the complete `index.html` (with embedded Tailwind and Alpine includes) implementing Sections 0–7, Visual/UI guidelines, analytics snippet, and minimal inline comments (`<!-- TODO:... -->`).
+
+🪜 **Developing Insight:**
+Driver but barrier for MamaAir.app: actionable air-safety guidance drives installs, but performance constraints threaten critical above-the-fold visual impact.
+
+✅ **Next Checkpoint/Test:**
+Render the generated page in DeepSite preview, switch to 360×640 mobile view, and confirm the “Download Mama Air” badge is visible without scrolling.
