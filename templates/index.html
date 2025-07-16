@@ -541,12 +541,14 @@
         </section>
 
         <!-- Protection Promise Section with Client's Preferred Image -->
-        <section class="relative py-16 sm:py-20 md:py-24 lg:py-32 overflow-hidden">
+        <section class="relative py-16 sm:py-20 md:py-24 lg:py-32 overflow-hidden min-h-[70vh] bg-slate-900">
             <!-- Background Image -->
             <div class="absolute inset-0">
                 <img src="/static/images/cityscape-mother.png" 
                      alt="Pregnant woman silhouette overlooking city at night under starry sky" 
-                     class="w-full h-full object-cover">
+                     class="w-full h-full object-cover"
+                     onload="this.style.opacity='1'" 
+                     style="opacity: 0; transition: opacity 0.5s ease-in-out;">
                 <div class="absolute inset-0 bg-gradient-to-r from-slate-900/85 via-slate-800/75 to-transparent"></div>
             </div>
             
