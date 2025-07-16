@@ -20,13 +20,32 @@ Preferred communication style: Simple, everyday language.
 - **Performance**: Added mobile-specific CSS optimizations, proper viewport settings, and accessibility improvements
 - **Assets**: Created professional app mockup SVG and functional QR code SVG
 
+### UX Research & Policy/Contact Improvements (July 16, 2025)
+- **Policies Accordion Enhancement**: Upgraded with research-based improvements following Stripe, Linear, and Slack best practices
+  - Added ARIA attributes (aria-expanded, aria-controls) for screen reader accessibility
+  - Implemented 56px minimum touch targets for mobile usability
+  - Added visual category icons (medical, heart, mobile, globe) for better content recognition
+  - Enhanced animations with smooth Alpine.js transitions and proper hover states
+  - Structured content with headings, bullet points, and better visual hierarchy
+  - Improved responsive design with proper mobile breakpoints (sm, md, lg)
+
+- **Contact Form Replacement**: Replaced Google iframe with native, mobile-optimized form
+  - Built multi-column layout (contact info + form) following Linear's design principles
+  - Added comprehensive form validation with real-time error handling
+  - Implemented touch-friendly inputs (44px+ minimum height) with proper focus states
+  - Added structured contact options (email, live chat, help center) with response time promises
+  - Included privacy consent checkbox linking to policies section
+  - Added loading states, success/error messaging with smooth transitions
+  - Built Alpine.js form controller with email validation and character limits
+
 ### Technical Improvements
-- Enhanced viewport meta tag with proper mobile support
+- Enhanced viewport meta tag with proper mobile support and viewport-fit=cover
 - Added touch-manipulation CSS for better mobile performance  
 - Implemented responsive typography scales using clamp() functions
 - Added proper focus states for mobile accessibility
 - Optimized loading performance with preconnect hints
 - Created comprehensive mobile-first CSS optimization file
+- Integrated form analytics tracking with Google Analytics events
 
 ## System Architecture
 
