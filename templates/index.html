@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mama Air - Breathe Safely for Your Baby</title>
+    <meta name="description" content="Air pollution monitoring and safety guidance for pregnant women. Get personalized recommendations to protect your baby's health.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mamaair.app/">
+    <meta property="og:title" content="Mama Air - Breathe Safely for Your Baby">
+    <meta property="og:description" content="Air pollution monitoring and safety guidance for pregnant women. Get personalized recommendations to protect your baby's health.">
+    <meta property="og:image" content="https://mamaair.app/static/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mamaair.app/">
+    <meta property="twitter:title" content="Mama Air - Breathe Safely for Your Baby">
+    <meta property="twitter:description" content="Air pollution monitoring and safety guidance for pregnant women. Get personalized recommendations to protect your baby's health.">
+    <meta property="twitter:image" content="https://mamaair.app/static/images/og-image.jpg">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://play.google.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/static/images/favicon.svg">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/custom.css">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'navy-deep': '#08182B',
+                        'navy-medium': '#1A2A4A',
+                        'amber-warm': '#FFA741',
+                        'teal-deep': '#10716B',
+                        'amber-hover': '#F97316'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter bg-neutral-50 text-slate-800 antialiased">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-lg mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-extrabold text-slate-800">
+                Mama Air
+            </div>
+            <div class="flex items-center space-x-2 text-sm text-slate-600">
+                <span class="px-2 py-1 bg-neutral-100 rounded">EN</span>
+                <span class="px-2 py-1 hover:bg-neutral-100 rounded cursor-pointer">FR</span>
+                <span class="px-2 py-1 hover:bg-neutral-100 rounded cursor-pointer">SW</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+            <!-- Hero Background -->
+            <div class="absolute inset-0 bg-gradient-to-br from-navy-deep to-navy-medium">
+                <img src="/static/images/hero-night.svg" alt="Silhouette of pregnant woman against night city" class="w-full h-full object-cover opacity-60">
+                <div class="absolute inset-0 bg-black/30"></div>
+            </div>
+            
+            <!-- Hero Content -->
+            <div class="relative z-10 max-w-lg mx-auto px-4 text-center text-white">
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
+                    Breathe Safely for Your Baby
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-neutral-200 leading-relaxed">
+                    Because the air you breathe shapes the life you carry.
+                </p>
+                
+                <!-- Primary CTA -->
+                <a href="https://play.google.com/store/apps/details?id=com.mamaair.app&utm_source=partner" 
+                   class="inline-flex items-center bg-teal-deep hover:bg-teal-800 text-white font-semibold rounded-full px-8 py-4 shadow-lg transition-all duration-300 hover:scale-105 mb-6"
+                   onclick="gtag('event', 'play_badge_click', {'utm_source': 'partner'});">
+                    <i class="fab fa-google-play mr-3 text-xl"></i>
+                    <div class="text-left">
+                        <div class="text-sm opacity-90">Get it on</div>
+                        <div class="text-lg font-bold">Google Play</div>
+                    </div>
+                </a>
+                
+                <!-- Moon Glow Accent -->
+                <div class="absolute -top-20 -right-20 w-40 h-40 bg-amber-warm rounded-full opacity-20 blur-3xl"></div>
+                <div class="absolute -bottom-20 -left-20 w-32 h-32 bg-amber-warm rounded-full opacity-15 blur-2xl"></div>
+            </div>
+        </section>
+
+        <!-- Why Section -->
+        <section id="why" class="py-16 md:py-24 bg-white">
+            <div class="max-w-lg mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-800 mb-8 text-center">
+                    Why Mama Air?
+                </h2>
+                
+                <p class="text-lg text-slate-600 leading-relaxed mb-12 text-center">
+                    She fears giving birth to a stillborn or unhealthy baby because of invisible air pollution around her. Every breath matters for your growing child.
+                </p>
+                
+                <div class="grid grid-cols-1 gap-6">
+                    <div class="flex items-start space-x-4 p-4 bg-neutral-50 rounded-lg">
+                        <div class="w-6 h-6 bg-teal-deep rounded-full flex items-center justify-center mt-1">
+                            <i class="fas fa-check text-white text-sm"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-slate-800 mb-2">Air pollution alerts tailored to your location</h3>
+                            <p class="text-slate-600">Get real-time notifications about air quality in your area with pregnancy-specific guidance.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4 p-4 bg-neutral-50 rounded-lg">
+                        <div class="w-6 h-6 bg-teal-deep rounded-full flex items-center justify-center mt-1">
+                            <i class="fas fa-check text-white text-sm"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-slate-800 mb-2">Personalized recommendations to reduce health risks</h3>
+                            <p class="text-slate-600">Receive customized advice based on your pregnancy stage and local conditions.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4 p-4 bg-neutral-50 rounded-lg">
+                        <div class="w-6 h-6 bg-teal-deep rounded-full flex items-center justify-center mt-1">
+                            <i class="fas fa-check text-white text-sm"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-slate-800 mb-2">Symptom tracking with insights designed for pregnancy</h3>
+                            <p class="text-slate-600">Monitor how air quality affects your health and your baby's development.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4 p-4 bg-neutral-50 rounded-lg">
+                        <div class="w-6 h-6 bg-teal-deep rounded-full flex items-center justify-center mt-1">
+                            <i class="fas fa-check text-white text-sm"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-slate-800 mb-2">Supportive advice, empowering you to make safe choices</h3>
+                            <p class="text-slate-600">Get actionable guidance to protect yourself and your baby from air pollution.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How Section -->
+        <section id="how" class="py-16 md:py-24 bg-neutral-50">
+            <div class="max-w-lg mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-800 mb-8 text-center">
+                    How It Works
+                </h2>
+                
+                <div class="grid grid-cols-1 gap-8 mb-12">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-amber-warm rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-chart-line text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">
+                            Track your timeline, symptoms & environment
+                        </h3>
+                        <p class="text-slate-600">
+                            Monitor your pregnancy journey and local air quality conditions
+                        </p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-amber-warm rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-brain text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">
+                            Analyze via DIAQNOSTIC cloud platform
+                        </h3>
+                        <p class="text-slate-600">
+                            Advanced AI processes your data to identify health patterns
+                        </p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-amber-warm rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-heart text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">
+                            Receive personalized guidance
+                        </h3>
+                        <p class="text-slate-600">
+                            Get tailored recommendations to keep you and your baby safe
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <div class="inline-flex items-center bg-white px-4 py-2 rounded-full shadow-sm">
+                        <span class="text-sm text-slate-600 mr-2">Powered by</span>
+                        <a href="https://diaqnostic.com/" class="text-sm font-semibold text-teal-deep hover:text-teal-800">
+                            DIAQNOSTIC analytics
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Section -->
+        <section id="download" class="py-16 md:py-24 bg-white">
+            <div class="max-w-lg mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-800 mb-8">
+                    Download Mama Air
+                </h2>
+                
+                <div class="flex flex-col items-center space-y-6 mb-8">
+                    <!-- Primary Download Button -->
+                    <a href="https://play.google.com/store/apps/details?id=com.mamaair.app&utm_source=partner" 
+                       class="inline-flex items-center bg-teal-deep hover:bg-teal-800 text-white font-semibold rounded-full px-8 py-4 shadow-lg transition-all duration-300 hover:scale-105"
+                       onclick="gtag('event', 'play_badge_click', {'utm_source': 'partner'});">
+                        <i class="fab fa-google-play mr-3 text-xl"></i>
+                        <div class="text-left">
+                            <div class="text-sm opacity-90">Get it on</div>
+                            <div class="text-lg font-bold">Google Play</div>
+                        </div>
+                    </a>
+                    
+                    <!-- QR Code -->
+                    <div class="bg-neutral-50 p-6 rounded-lg">
+                        <img src="/static/images/qr-code.svg" alt="QR Code for Google Play Store" class="w-32 h-32 mx-auto mb-4">
+                        <p class="text-sm text-slate-600">Scan to download</p>
+                    </div>
+                </div>
+                
+                <p class="text-slate-600 text-sm">
+                    Available for Sub-Saharan regions. iOS version coming soon.
+                </p>
+            </div>
+        </section>
+
+        <!-- Policies Section -->
+        <section id="policies" class="py-16 md:py-24 bg-neutral-50">
+            <div class="max-w-lg mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-800 mb-8 text-center">
+                    Policies
+                </h2>
+                
+                <div class="space-y-4" x-data="{ open: null }">
+                    <!-- Medical Disclaimer -->
+                    <div class="bg-white rounded-lg shadow-sm">
+                        <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-teal-deep"
+                                @click="open = open === 'medical' ? null : 'medical'">
+                            <h3 class="font-semibold text-slate-800">Medical Disclaimer</h3>
+                            <i class="fas fa-chevron-down transition-transform duration-200"
+                               :class="{'rotate-180': open === 'medical'}"></i>
+                        </button>
+                        <div x-show="open === 'medical'" x-transition class="px-6 pb-4">
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Mama Air is not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition. The information provided by this app is for educational purposes only and should not be used as a replacement for professional medical care.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Customer Happiness Policy -->
+                    <div class="bg-white rounded-lg shadow-sm">
+                        <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-teal-deep"
+                                @click="open = open === 'happiness' ? null : 'happiness'">
+                            <h3 class="font-semibold text-slate-800">Customer Happiness Policy</h3>
+                            <i class="fas fa-chevron-down transition-transform duration-200"
+                               :class="{'rotate-180': open === 'happiness'}"></i>
+                        </button>
+                        <div x-show="open === 'happiness'" x-transition class="px-6 pb-4">
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                We are committed to your satisfaction with Mama Air. If you experience any issues or are not completely satisfied with our service, please contact our support team within 30 days of your concern. We will work diligently to resolve any problems and ensure you have the best possible experience with our app.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- App Privacy Policy -->
+                    <div class="bg-white rounded-lg shadow-sm">
+                        <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-teal-deep"
+                                @click="open = open === 'app-privacy' ? null : 'app-privacy'">
+                            <h3 class="font-semibold text-slate-800">App Privacy Policy</h3>
+                            <i class="fas fa-chevron-down transition-transform duration-200"
+                               :class="{'rotate-180': open === 'app-privacy'}"></i>
+                        </button>
+                        <div x-show="open === 'app-privacy'" x-transition class="px-6 pb-4">
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                We collect and process your personal data to provide personalized air quality recommendations. This includes location data, health symptoms, and pregnancy timeline information. All data is encrypted and stored securely. We do not sell your personal information to third parties. You can request data deletion at any time through the app settings.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Website Privacy Policy -->
+                    <div class="bg-white rounded-lg shadow-sm">
+                        <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-teal-deep"
+                                @click="open = open === 'web-privacy' ? null : 'web-privacy'">
+                            <h3 class="font-semibold text-slate-800">Website Privacy Policy</h3>
+                            <i class="fas fa-chevron-down transition-transform duration-200"
+                               :class="{'rotate-180': open === 'web-privacy'}"></i>
+                        </button>
+                        <div x-show="open === 'web-privacy'" x-transition class="px-6 pb-4">
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                This website uses cookies and analytics to improve your browsing experience and measure website performance. We collect anonymous usage data to understand how visitors interact with our site. No personally identifiable information is collected through this website unless you voluntarily provide it through our contact form.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 md:py-24 bg-white">
+            <div class="max-w-lg mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-800 mb-8 text-center">
+                    Contact Us
+                </h2>
+                
+                <p class="text-slate-600 text-center mb-8 leading-relaxed">
+                    We welcome your feedback as we continuously improve our app to better serve expecting mothers. Your input helps us create a safer environment for you and your baby.
+                </p>
+                
+                <div class="bg-neutral-50 rounded-lg p-4">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdummy_form_id/viewform?embedded=true" 
+                            width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0"
+                            title="Contact Form">
+                        Loading...
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-white py-12">
+        <div class="max-w-lg mx-auto px-4">
+            <div class="flex flex-col space-y-4 text-center">
+                <div class="flex justify-center space-x-8 text-sm">
+                    <a href="#" class="text-neutral-300 hover:text-white transition">About Mama Air</a>
+                    <a href="#policies" class="text-neutral-300 hover:text-white transition">Policies</a>
+                    <a href="#contact" class="text-neutral-300 hover:text-white transition">Contact</a>
+                </div>
+                <p class="text-sm text-neutral-400">
+                    © 2025 Mama Air. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Analytics Script -->
+    <script src="/static/js/analytics.js"></script>
+</body>
+</html>
