@@ -1,0 +1,42 @@
+Here are targeted questions—section by section—to spot UI discrepancies and text mismatches between this prototype and our Tech Task. Use these to refine your prompt for adapting the HTML:
+
+---
+
+## Header / Navbar
+
+1. The live header still uses “MyApp” and a purple gradient—should this be replaced with the “Mama Air” word-mark and our navy-amber palette?
+2. The language switch shows EN/FR/SW but isn’t styled per spec (light background, slate-800 text)—should we restyle it to match our minimal Tailwind look?
+
+## Hero Section
+
+3. The headline reads “Ваше женское здоровье…” instead of “Breathe Safely for Your Baby.” Should we update both text and `lang="ru"` to English for MVP?
+4. The current hero uses a purple-amber gradient—tech spec calls for a deep-navy background with amber moon accents. Do we swap in `hero-night.png` with overlay?
+5. The Play badge here is black with white text; spec requires a teal-700 badge with the GA4 snippet. Should we rebuild it as `<a class="bg-teal-700 hover:bg-teal-800">…</a>` and attach analytics?
+
+## Features / “Why”
+
+6. This features grid is generic and shows cycle-tracker icons—should we replace each card’s icon and text with our four core benefits from Mama Air Site Text?
+7. The copy currently says “Точный календарь цикла” etc.—needs to become English bullets like “Air pollution alerts tailored to your location.”
+
+## How It Works
+
+8. Prototype uses numbered circles on a gradient background; spec wants Heroicons outlines + white background. Should we switch to three `svg` icons with amber-500 stroke on neutral-50?
+9. The footer badge reads “Powered by DIAQNOSTIC analytics” but is missing the link footnote. Should we append `<small><a href="https://diaqnostic.com/">…</a></small>`?
+
+## Download & QR
+
+10. The QR lives in the CTA section, not in its own “Download” block. Should we move it under heading “Download Mama Air” and add the subtext about Sub-Saharan regions?
+11. The App Store link is present—tech task is Android-only for MVP. Should we remove the App Store button entirely and only render Google Play plus QR?
+
+## Policies Accordion
+
+12. The current FAQ uses manual JS and FontAwesome. Spec calls for Alpine.js-powered accordion with our four policy texts. Should we replace this section entirely?
+
+## Contact & Footer
+
+13. The live “Contact Us” embeds a missing Google Drive screenshot. Should we remove that iframe and embed the Google Forms iframe from [support@mamaair.app](mailto:support@mamaair.app)?
+14. Footer lists “MyApp” social links and mailing list—spec needs only quick links (About / Policies / Contact) and © 2025 Mama Air. Should we simplify accordingly?
+
+---
+
+Use these questions to refine your Replit-agent prompt so it adapts the provided `index.html` exactly to our Tech Task from header through footer.

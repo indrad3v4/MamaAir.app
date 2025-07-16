@@ -1,0 +1,140 @@
+�� Тех-задание на программировани MamaAir.app landing
+1.Audience Portrait &amp; Core Insight
+•Persona: 20–35-летние работающие беременные (или планирующие) женщины из
+Западной и Восточной Африки; Android-устройства низкого и среднего сегмента.
+•Pain Insight: “Она боится родить мёртвого или нездорового ребёнка из-за невидимого
+воздуха, которым дышит.”
+•Narrative: лендинг должен снять этот страх, предложив конкретные рекомендации по
+безопасному воздуху → основная метрика — клик “Get it on Google Play”.
+
+2. Primary KPI &amp; Success Benchmarks
+•Цель: CTR на Play-бэйдж ≥ 8 %.
+•Вторичные метрики: глубина скролла ≥ 75 %, LCP ≤ 2.5 с, CLS &lt; 0.1, Lighthouse Perf ≥
+90.
+•Analytics: GA4-событие play_badge_click с UTM-меткой source=partner.
+
+3. Content &amp; Section Architecture
+0. Header
+– Логотип “Mama Air” в виде простой word-mark.
+– Плейсхолдер для переключателя языка (EN / FR / SW).
+
+1. Hero
+– H1: “Breathe Safely for Your Baby”
+– Подзаголовок (Lead-in из Mama Air Site Text.odt):
+“Because the air you breathe shapes the life you carry.”
+– Кнопка-бэйдж Google Play: “Download Mama Air”
+– Иллюстрация hero-image (см. концепт):
+– Фон: силуэт беременной женщины на крыше, туман и луна
+
+– Файл: `hero-night.png`, WebP ≤ 100 кБ, alt=&quot;Силуэт беременной женщины на фоне
+ночного города&quot;
+
+2. Why
+– Параграф о страхе и рисках (текст из Mama Air Site Text.odt):
+“She fears giving birth …”
+– Список преимуществ (чек-mark или икона):
+1. Air pollution aware and alerts tailored to your location
+2. Personalized recommendations to reduce health risks
+3. Symptom tracking with insights designed for pregnancy
+4. Supportive advice, empowering you to make safe choices
+
+3. How
+– Трёхшаговая диаграмма (иконки Heroicons Outline 24 px):
+1. Track your timeline, symptoms &amp; environment
+2. Analyze via DIAQNOSTIC cloud platform
+3. Receive personalized guidance
+– Под диаграммой: badge “Powered by DIAQNOSTIC analytics” + footnote с ссылкой на
+https://diaqnostic.com/
+
+4. Download
+– Повтор кнопки-бэйджа Google Play
+– QR-код, ведущий на страницу в Play Store
+– Текст “Available for Sub-Saharan regions. iOS version coming soon.”
+
+5. Policies
+– Аккордеон с четырьмя пунктами (контент взять с BobiHealth):
+
+• Medical Disclaimer
+• Customer Happiness Policy
+• App Privacy Policy
+• Website Privacy Policy
+– Каждый текст раскрывается inline через Alpine.js accordion.
+
+6. Contact
+– Краткий абзац: “We welcome your feedback as we continuously improve our app…”
+– Встроенный iframe Google Forms (связать на support@mamaair.app)
+
+7. Footer
+– Ссылки: About Mama Air / Policies / Contact
+– © 2025 Mama Air
+*Hero-image concept: одинокая беременная женщина на фоне туманного города,
+слабое сияние луны = надежда.
+
+4.Visual &amp; UI Guidelines
+— �� Colour Palette
+• Hero Gradient: from #08182B → #1A2A4A (deep navy)
+• Moon Glow Accent: #FFA741 (warm amber)
+• Primary CTA: #10716B (deep teal)
+• Secondary Accent (hover, links): #F97316 (amber-500)
+• Text on Dark: #E5E7EB (neutral-200) for body, #FFFFFF for headings
+• Text on Light: #374151 (slate-600) for body, #0F172A (slate-800) for headings
+• Section Backgrounds: #FAFAFA (neutral-50)
+
+— �� Typography
+• Headings: Inter Extra Bold (или system-UI, font-weight 800), 32 px mobile / 48 px
+desktop
+• Body: Inter Regular, 18 px, line-height 1.5
+• Arabic: Noto Sans Arabic, RTL, 20 px, line-height 1.6
+
+— �� Imagery
+• hero-night.png: WebP ≤ 100 кБ, full-bleed, gradient overlay для читаемости
+• onboard-guardian.png: WebP ≤ 80 кБ, full-height background with bg-black/40
+• features-bg.png: WebP ≤ 50 кБ, `opacity-10`, absolute behind feature cards,
+`loading=&quot;lazy&quot;`
+
+— �� Buttons &amp; Controls
+• Primary Button:
+class=&quot;bg-teal-700 hover:bg-teal-800 text-white font-semibold
+
+rounded-full px-6 py-3 shadow-lg transition-transform hover:scale-105&quot;
+• Secondary Links:
+class=&quot;text-amber-500 hover:text-amber-600 underline&quot;
+
+— �� Icons &amp; Progress
+• Heroicons Outline, 24 px, stroke-1.5, `text-amber-500`
+• Progress Bar: track `bg-neutral-200`, fill `bg-teal-700`, height 4 px, rounded
+
+— �� Pop-ups / Accordion
+• Alpine.js v3, bundle &lt; 5 кБ
+• Accordion headers: `bg-white shadow-md/20 px-4 py-3 rounded-lg flex justify-between`
+
+— �� Layout &amp; Responsiveness
+• Container: `max-w-lg mx-auto px-4`
+• Section: `py-16 md:py-24`
+• Grid (Why/Features): `grid grid-cols-1 sm:grid-cols-2 gap-6`
+• Mobile-first down to 360 px, desktop breakpoint @ 640 px
+
+— ♿ Accessibility
+• Contrast ratio ≥ 4.5:1
+• Semantic landmarks (`&lt;header&gt;`, `&lt;main&gt;`, `&lt;footer&gt;`)
+• `aria-label` on all interactive icons/buttons
+• Keyboard-nav and focus-ring outlines
+
+5.Tech &amp; Deployment
+•Stack: index.html + Tailwind v3 CDN + Alpine.js; сборка на Replit (авто-Let’s Encrypt SSL).
+
+•Domain: mamaair.app (CNAME → Replit).
+•Analytics: GA4 (+ /analytics.js для события).
+•SEO: &lt;title&gt; ≤ 60 зн., &lt;meta description&gt; ≤ 155 зн., OG-image 1200×630, robots.txt allow
+all.
+•Performance Budget: первичный payload ≤ 100 кБ, изображения WebP, preconnect к
+c.google.com.
+•Accessibility: семантические лэндинг-landmarks, aria-label на иконках, keyboard-nav,
+контраст ≥ 4.5:1.
+
+6.Validation, Handoff &amp; Roadmap
+•QA: тесты на реальных устройствах Android 8–14, эмуляция 3G, Safari iOS (визуал).
+•Deliverables: 1. Deployed MamaAir.app, 2. Git-репозиторий с кодом, 3. Дополнительно:
+PDF-отчёт Lighthouse, 4. тест GA4 realtime.
+•Future Hooks: структура i18n (/locales/en.json), feature-flag для iOS-бэйджа, Tailwind
+partials.
