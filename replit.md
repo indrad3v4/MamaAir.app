@@ -8,7 +8,19 @@ MamaAir.app is a Flask-based web application designed to provide air quality mon
 
 Preferred communication style: Simple, everyday language.
 
-## Recent Changes (Latest Session - July 16, 2025)
+## Recent Changes (Latest Session - July 19, 2025)
+
+### Footer Simplification v0.1 to v0.2 (July 19, 2025)
+- **Minimalist Footer Design**: Updated landing page footer per client feedback
+  - Kept only brand message: "Breathe with Confidence. Act with Support. Mama Air."
+  - Kept copyright text: "Copyright 2025"
+  - Removed all social media icons (Facebook, Twitter, Instagram)
+  - Removed newsletter subscription form
+  - Removed all navigation links (Company, Support sections)
+  - Maintained responsive design and brand color scheme
+  - Centered layout for cleaner visual hierarchy
+
+## Previous Changes (Session - July 16, 2025)
 
 ### Mobile-First Responsive Design Implementation
 - **Mobile Navigation**: Added Alpine.js hamburger menu with smooth animations and proper touch targets
