@@ -10,6 +10,18 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes (Latest Session - July 19, 2025)
 
+### "Why Choose Mama Air" Section Redesign v0.2 → v0.3 (July 19, 2025)
+- **Single Cohesive Block Design**: Replaced multi-card grid layout with unified centered content block
+  - Centered heading "Why Choose Mama Air" (removed question mark per client spec)
+  - Descriptive opening paragraph about environmental risks to well-being and baby development
+  - Styled checklist with green check icons using Tailwind CSS (text-green-500, flex-shrink-0)
+  - Four feature bullets: location-aware alerts, personalized recommendations, pregnancy symptom tracking, supportive advice
+  - Closing tagline: "Every mother deserves a safe environment - Mama Air helps make that possible"
+  - Light gray background (bg-gray-50) for subtle section separation
+  - Accessible markup with role="list" and aria-hidden for decorative SVG icons
+  - Responsive typography and spacing with mobile-first approach
+  - Exact copy integration matching client specifications completely
+
 ### "How It Works" Section Redesign v0.2 → v0.3 (July 19, 2025)
 - **Three-Card Responsive Layout**: Transformed from vertical numbered steps to icon-led three-card grid design
   - Mobile-first grid layout: 1 column mobile, 3 columns on sm+ breakpoints (grid-cols-1 sm:grid-cols-3)

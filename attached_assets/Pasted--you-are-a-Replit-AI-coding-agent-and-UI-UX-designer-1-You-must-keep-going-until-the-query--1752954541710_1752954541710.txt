@@ -1,0 +1,92 @@
+—you are a Replit AI coding agent **and UI/UX designer**—  
+1️⃣ You must keep going until the query is fully resolved. Only finish when you’re 100 % sure the implementation meets all requirements.  
+2️⃣ If you’re unsure about the codebase or file contents, use your tools (`open`, `search`, `grep`, etc.) to inspect—never guess.  
+3️⃣ Before each action, **plan** your approach in 2–3 bullet points. After each code change, **reflect** on results and decide next steps.
+
+—🗂 CONTEXT —  
+• Section: **Why Choose Mama Air**  
+• Task: From **v0.2 → v0.3**, replace the existing markup with a single cohesive block (do not split into separate sub-blocks) using the copy exactly as shown in the screenshot. Render a centered heading, a descriptive paragraph, a styled checklist with green check-icons, and a final tagline.  
+
+—🔤 **Exact Copy to Include**  
+```text
+Why Choose Mama Air
+
+Environmental risks like air pollution and heat stress can silently impact your well-being and your baby's development.
+
+With Mama Air, you stay informed and protected - anytime, anywhere:
+
+✅ Air pollution aware and alerts tailored to your location
+✅ Personalized recommendations to reduce health risks
+✅ Symptom tracking with insights designed for pregnancy
+✅ Supportive advice, empowering you to make safe choices
+
+Every mother deserves a safe environment - Mama Air helps make that possible.
+
+—🗂 INPUTS —
+
+{
+  "file_path": "public/index.html#why-choose-mama-air",
+  "screenshot_reference": "13E3F95E-FDD3-498A-8078-D9CB083A6777.jpeg",
+  "version_from": "v0.2",
+  "version_to": "v0.3"
+}
+
+—🗂 CONSTRAINTS —
+	•	Payload ≤ 100 KB
+	•	Tech: Tailwind v3 + Alpine.js
+	•	Mobile-first, WCAG AA accessible
+
+—🔍 RESEARCH —
+Use internet search to gather 2–3 examples of:
+• Tailwind checklist/list styles with custom icons (list-none, flex items-start, text-green-500)
+• Centered block layouts with consistent spacing (text-center, space-y-6)
+• Accessible list semantics (<ul role="list">, proper <svg aria-hidden="true">)
+
+—🪜 EXECUTION PLAN —
+	1.	Analyze & Plan
+	•	Open public/index.html at #why-choose-mama-air, remove any old markup for this section.
+	•	Sketch the new <section> structure: heading → paragraph → list → final line.
+	2.	Gather Resources
+	•	Find Tailwind utilities for green check icons (e.g. text-green-500), spacing (mt-4, space-y-3), typography (text-lg, font-semibold).
+	•	Confirm Alpine.js is not needed (static content).
+	3.	Implement Iteratively
+	•	Insert:
+
+<section id="why-choose-mama-air" class="px-4 py-8 bg-gray-50 rounded-lg">
+  <h2 class="text-2xl font-semibold text-center">Why Choose Mama Air</h2>
+  <p class="mt-4 text-center leading-relaxed">
+    Environmental risks like air pollution and heat stress can silently impact your well-being and your baby's development.
+  </p>
+  <ul role="list" class="mt-6 space-y-3">
+    <li class="flex items-start">
+      <svg aria-hidden="true" class="w-6 h-6 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0..."/></svg>
+      <span class="ml-3">Air pollution aware and alerts tailored to your location</span>
+    </li>
+    <li class="flex items-start">
+      <svg aria-hidden="true" class="w-6 h-6 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0..."/></svg>
+      <span class="ml-3">Personalized recommendations to reduce health risks</span>
+    </li>
+    <li class="flex items-start">
+      <svg aria-hidden="true" class="w-6 h-6 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0..."/></svg>
+      <span class="ml-3">Symptom tracking with insights designed for pregnancy</span>
+    </li>
+    <li class="flex items-start">
+      <svg aria-hidden="true" class="w-6 h-6 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0..."/></svg>
+      <span class="ml-3">Supportive advice, empowering you to make safe choices</span>
+    </li>
+  </ul>
+  <p class="mt-6 text-center font-medium">
+    Every mother deserves a safe environment - Mama Air helps make that possible.
+  </p>
+</section>
+
+
+	•	Ensure all text matches exactly and icons use Tailwind’s fill-current.
+
+	4.	Test & Validate
+	•	Preview on mobile: check centering, spacing, and icon alignment.
+	•	Run Lighthouse & accessibility audit: verify list semantics and contrast.
+	5.	Refine & Document
+	•	Adjust spacing (px-4 py-8, space-y-3) or background shade (bg-gray-50) if needed.
+	•	Update CHANGELOG.md under v0.3: “Redesigned ‘Why Choose Mama Air’ into a styled checklist block.”
+
