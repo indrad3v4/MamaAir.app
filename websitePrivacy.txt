@@ -1,0 +1,88 @@
+Website Privacy Policy of ‘Mama Air’ application.
+
+Website Privacy Notice. 
+
+Last Updated: July 01, 2025.
+This privacy notice (“Notice”) describes how personal data about you may be used and disclosed. Please review this Notice carefully.
+
+Introduction
+‍‘Mama Air’ application (“we,” “us,” or “Mama Air”) values your privacy and is committed to keeping your personal data confidential. We use your data solely in the context of providing the information and services described on https://www.mamaair.app (the “Website”). By accessing and/or using the Website, you are consenting to be bound by this Notice and acknowledge that you have read and agree to the terms of this Notice. If you do not agree to accept this Notice, you must immediately cease using the Website.
+
+Applicability
+This Notice applies to personal data that we collect from users of the Website, including information collected:
+• On the Website;
+• In email; and/or
+• Through other electronic messages that you send to us, including communications made through the Website.
+
+Note Regarding Third-Party Sites. Please note that the Website may contain links to other sites that are not operated by ‘Mama Air’. If you click a third-party link, you will be directed to that third party’s site. We strongly advise you to review the privacy notices of every site you visit. ‘Mama Air’ has no control over and assumes no responsibility for the content, privacy notices, or practices of any third-party sites or services. This Notice does not apply to your use of or access to any third-party sites or services.
+
+Children Under the Age of 18. The Website is not intended for children under the age of 18 years old, and we do not knowingly collect personal information from children under 18. If you are under 18, do not use the Website or provide any information about yourself to us. If we learn we have collected or received personal information from a child under 18 without verification of parental consent, we will delete that information.
+
+Collection and Use of Data
+
+‍Information We Collect About You
+We may collect personal information (such as names, addresses, phone numbers, and email addresses) that you affirmatively give to us, such as when you complete the contact form or contact us by email. Giving us personal information through the Website is voluntary and is not required to use the Website.
+
+As you navigate through and interact with the Website, certain data may be collected through automatic data collection technologies that collect statistical (non-personal) information about your equipment, browsing actions, and Website usage patterns. This data includes information about content accessed and page load times, internet connection, IP address, and geographic location by country. The data we collect through these automated technologies is used to help us improve the Website and provide a more personalized experience. The information we collect automatically is only statistical data and does not include personal information.
+
+The technologies used for this automatic data collection may include, but are not limited to:
+• Cookies (or browser cookies). A cookie is a small file placed on the hard drive of your computer. You may refuse to accept browser cookies by activating the appropriate settings on your browser. However, if you select this setting, you may be unable to access certain parts of the Website. Unless you have adjusted your browser setting so that it will refuse cookies, our system may issue cookies when you direct your browser to the Website.
+
+• Web Beacons. Pages of the Website and our email may contain small electronic files known as web beacons (also referred to as clear gifs, pixel tag, and single-pixel gifs) that permit us to, for example, count users who have visited those pages or opened an email and for other related website statistics (e.g., verifying system and server integrity).
+
+Do Not Track Disclosure
+Some web browsers may transmit do not track (“DNT”) signals to websites with which the user communicates. To date, there is no industry standard for DNT, and users cannot know how a given company responds to a DNT signal they receive from browsers. ‘Mama Air’ is committed to remaining apprised of DNT standards. However, we do not support DNT browser settings and do not currently participate in any DNT frameworks that would allow us to respond to signals or other mechanisms regarding the collection of your personal information.
+
+How We Use Your Data
+‍We may use information that we collect about you or that you provide to us, including any personal information, as follows:
+• To present the Website and its contents to you;
+• To communicate with you;
+• To provide you with information or services that you request;
+• To respond to lawful requests from public and government authorities, and to comply with applicable federal and state law, including judicial proceedings and court orders;
+• To manage and improve the Website and its content;
+• To send you information about changes to our terms, conditions, and policies;
+• To allow us to protect our rights, pursue available remedies, and/or limit any damages we may sustain;
+• In any other way we may describe when you provide the information; and
+• For any other purpose with your consent.
+
+Disclosure of Data
+‍We do not share personal information obtained through the Website with any third parties without your express consent, except as follows:
+• To contractors, service providers, and other third parties we use to support our business;
+• To the extent doing so is necessary to provide services you have requested;
+• To comply with any court order, law, or legal process, including to respond to any government or regulatory request; and
+• To enforce agreements between us.
+
+Data Retention
+We will retain your personal information only as long as necessary and as required for our business operations, the provision of any services, archival purposes, and/or to satisfy legal requirements.
+
+The exact period of retention (“Retention Period”) will depend on:
+• The amount, nature, and sensitivity of the personal data;
+• The personal risk of harm for unauthorized use or disclosure;
+• The purposes for which we process your personal data, including whether those purposes can be achieved through other means;
+• Business operations; and
+• Legal requirements.
+
+At the end of the Retention Period, we will remove your personal data from our databases. Please note that once we disclose your personal data to third parties, we may not be able to access that personal data and we cannot force the deletion or modification of such information by third parties.
+
+User Rights
+‍As a user of the Website, you have certain rights relating to your personal data. These rights are subject to local data protection and privacy laws, and may include the right to:
+• Access personal data held by ‘Mama Air’;
+• Erase/delete your personal data, to the extent permitted by applicable data protection and privacy laws and to the extent technologically feasible;
+• Receive communications related to the processing of your personal data;
+• Restrict the processing of your personal data to the extent permitted by law;
+• Object to the further processing of your personal data, including the right to object to marketing;
+• Request that your personal data be transferred to a third party, if possible;
+• Receive your personal data in a structured, commonly used, and machine-readable format; and/or
+• Rectify inaccurate personal information and, taking into account the purpose of processing the personal data, ensure it is complete.
+
+Where the processing of your personal data by us is based on consent, you have the right to withdraw that consent at any time. If you would like to withdraw your consent or exercise any of the above rights, please contact us at support@mamaair.app. If you would like to request any modifications or deletions to your personal data, please contact us at: support@mamaair.app
+‍
+Data Security
+‍Unfortunately, the transmission of information via the Internet is not completely secure. Although we do our best to protect your personal information, we cannot guarantee the security of information transmitted through our website or transmitted to us via email. Any electronic transmission of personal or confidential information is at your own risk.
+
+Changes to this Notice
+‍ It is our policy to post any changes we make to this Notice on this page. The date the Notice was last revised is identified at the top of the page. You are responsible for periodically visiting our Website and this Notice to check for any updates. Your continued use of the Website after we make changes is deemed to be acceptance of those changes.
+
+Contact Information
+‍To ask questions or comment about this Notice, please contact us by email at support@support.app
+
