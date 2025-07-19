@@ -11,12 +11,15 @@ Preferred communication style: Simple, everyday language.
 ## Recent Changes (Latest Session - July 19, 2025)
 
 ### Mobile Preview Update v0.2 → v0.3 (July 19, 2025)
-- **Real Screenshot Integration**: Replaced placeholder SVG mockup with actual mobile app screenshot (05B16018-F7DF-4EF2-96B5-0BECDAE00469.jpeg)
-- **Enhanced Device Frame**: Maintained existing device frame styling with border, shadow, and responsive sizing
+- **Real Screenshot Integration**: Replaced placeholder SVG mockup with actual mobile app screenshot (mobile-screenshot.jpeg)
+- **Smartphone Device Frame**: Created realistic phone mockup with gray-900 bezel, rounded corners (2.5rem), and proper proportions
+- **Hardware Details**: Added power button (right side) and volume buttons (left side) for authentic smartphone appearance
+- **Responsive Sizing**: Device frame scales from 256px×500px on mobile to 320px×630px on larger screens
+- **Screen Integration**: Mobile screenshot fills device screen area with object-cover for proper scaling
+- **File Path Fixed**: Moved screenshot from attached_assets to static/images for web server access
 - **Improved Accessibility**: Updated alt text to "Screenshot of Mama Air mobile UI" for better description
-- **Object Cover**: Added object-cover class to ensure proper image scaling and aspect ratio preservation
 - **Maintained Animations**: Kept floating particle animations around the device frame for visual interest
-- **Performance Optimized**: Real screenshot maintains existing responsive breakpoints and loading performance
+- **Enhanced Realism**: Device frame mimics actual smartphone with proper bezel, shadow-2xl, and hardware buttons
 
 ### Hero Section Update v0.2 → v0.3 (July 19, 2025)
 - **Updated Heading**: Changed to "Mama Air. "Breathe Safely for Your Baby"." per client specification
