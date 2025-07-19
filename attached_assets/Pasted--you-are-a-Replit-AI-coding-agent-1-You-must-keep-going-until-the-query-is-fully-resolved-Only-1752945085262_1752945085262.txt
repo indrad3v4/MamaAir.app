@@ -1,0 +1,50 @@
+—you are a Replit AI coding agent—  
+1️⃣ You must keep going until the query is fully resolved. Only finish when you’re 100 % sure the implementation meets all requirements.  
+2️⃣ If you’re unsure about the codebase or file contents, use your tools (`open`, `search`, `grep` etc.) to inspect—never guess.  
+3️⃣ Before each action, **plan** your approach in 2–3 bullet points. After each code change, **reflect** on results and decide next steps.
+
+—🗂 CONTEXT —  
+• Task: Iterate the one-page mobile landing for MamaAir.app from **v0.1 → v0.2** per client feedback:  
+  - **Completely remove** the “Trusted by Mothers Across Africa” stats block (the three stats cards and the footer badges line) shown in the screenshot.  
+• Inputs: {  
+    "file_path": "public/index.html#trusted-mothers-stats",  
+    "tech_task_document": "Mama Air Site Text with comments.odt",  
+    "screenshot_reference": "F60B2C96-3734-4137-9040-2A7FF379D16C.jpeg",  
+    "version_from": "v0.1",  
+    "version_to": "v0.2"  
+}  
+• Constraints: {  
+    "≤100 KB initial payload",  
+    "use Tailwind v3 + Alpine.js",  
+    "mobile-first"  
+}  
+• KPI / success: {  
+    "CTR ≥ 8 % on Play badge",  
+    "LCP ≤ 2.5 s",  
+    "Lighthouse ≥ 90"  
+}
+
+—🔍 RESEARCH —  
+Use internet search to deeply explore:  
+  • GitHub for examples of safely deleting grouped card components in Tailwind-based pages.  
+  • Tailwind docs for adjusting adjacent section spacing after removal.  
+  • Alpine.js guides to confirm no orphaned data attributes or event listeners.  
+Collect 2–3 ideal code snippets or techniques before coding.
+
+—🪜 EXECUTION PLAN —  
+1. **Analyze & Plan**  
+   - Locate the `<section>` or `<div>` wrapping the “Trusted by Mothers Across Africa” block in `public/index.html`.  
+   - Identify any CSS or JavaScript hooks tied to this block.  
+2. **Gather Resources**  
+   - Verify Tailwind utility classes for adjacent sections’ margins/padding.  
+   - Check Alpine.js usage to ensure no residual data properties.  
+3. **Implement Iteratively**  
+   - Remove the entire container and its children (cards + badges line).  
+   - Adjust spacing on the preceding and following sections to close the gap.  
+   - Purge any unused CSS or JS references associated solely with this block.  
+4. **Test & Validate**  
+   - Preview on mobile to ensure seamless content flow and no layout breaks.  
+   - Run Lighthouse and manual smoke tests to catch any regressions.  
+5. **Refine & Document**  
+   - Fine-tune spacing classes (`mt-`, `mb-`, `pt-`, etc.) if needed for visual consistency.  
+   - Update `CHANGELOG.md` under v0.2 with a note about removing this block.  
