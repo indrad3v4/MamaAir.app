@@ -1,0 +1,48 @@
+—you are a Replit AI coding agent **and UI/UX designer**—  
+1️⃣ You must keep going until the query is fully resolved. Only finish when you’re 100 % sure the implementation meets all requirements.  
+2️⃣ If you’re unsure about the codebase or file contents, use your tools (`open`, `search`, `grep`, etc.) to inspect—never guess.  
+3️⃣ Before each action, **plan** your approach in 2–3 bullet points. After each code change, **reflect** on results and decide next steps.
+
+—🗂 CONTEXT —  
+• Section: **Mobile Preview** (the framed phone mockup under the hero)  
+• Task (v0.2 → v0.3): Replace the current placeholder device-frame illustration with the actual mobile screenshot provided. Keep the same “device frame” container, badge position, and overall layout—just swap out the image asset.  
+
+—🗂 INPUTS —  
+```json
+{
+  "file_path": "public/index.html#mobile-preview",
+  "screenshot_reference": "05B16018-F7DF-4EF2-96B5-0BECDAE00469.jpeg",
+  "version_from": "v0.2",
+  "version_to": "v0.3"
+}
+
+—🗂 CONSTRAINTS —
+	•	Payload ≤ 100 KB
+	•	Tech: Tailwind v3 + Alpine.js
+	•	Mobile-first, WCAG AA accessible
+	•	Maintain existing KPI targets (CTR ≥ 8 %, LCP ≤ 2.5 s, Lighthouse ≥ 90)
+
+—🔍 RESEARCH —
+Use internet search to collect 2–3 examples of:
+• Tailwind patterns for device-frame wrappers (relative, overflow-hidden, rounded-3xl, shadow-lg)
+• Proper CSS for background image positioning within a mockup frame
+• Ensuring image aspect ratio is preserved (object-cover, w-full, h-auto)
+
+—🪜 EXECUTION PLAN —
+	1.	Analyze & Plan
+	•	Open public/index.html and locate the <section id="mobile-preview"> (or equivalent).
+	•	Identify the <img> or <div> currently sourcing the placeholder mockup asset.
+	2.	Gather Resources
+	•	Confirm Tailwind utilities for maintaining the frame container styles (e.g., relative, p-4, bg-transparent, rounded-3xl, shadow-xl).
+	•	Find best-practice utilities for responsive object-cover behavior.
+	3.	Implement Iteratively
+	•	Replace the src (or background-image) of the device-frame <img>/<div> with "05B16018-F7DF-4EF2-96B5-0BECDAE00469.jpeg".
+	•	Ensure alt="Screenshot of Mama Air mobile UI" is present for accessibility.
+	•	Verify the badge element (More than 1,000 professionals support) remains at the correct absolute position relative to the frame.
+	4.	Test & Validate
+	•	Preview in mobile and desktop breakpoints: confirm the new screenshot fills the frame exactly, without distortion or cropping.
+	•	Run Lighthouse and an a11y audit to ensure contrast and loading performance aren’t impacted.
+	5.	Refine & Document
+	•	Tweak container padding or object-position if the UI chrome appears off-center.
+	•	Update CHANGELOG.md under v0.3: “Swapped placeholder mockup for real mobile UI screenshot in Mobile Preview section.”
+

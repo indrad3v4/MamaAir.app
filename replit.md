@@ -10,6 +10,14 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes (Latest Session - July 19, 2025)
 
+### Mobile Preview Update v0.2 → v0.3 (July 19, 2025)
+- **Real Screenshot Integration**: Replaced placeholder SVG mockup with actual mobile app screenshot (05B16018-F7DF-4EF2-96B5-0BECDAE00469.jpeg)
+- **Enhanced Device Frame**: Maintained existing device frame styling with border, shadow, and responsive sizing
+- **Improved Accessibility**: Updated alt text to "Screenshot of Mama Air mobile UI" for better description
+- **Object Cover**: Added object-cover class to ensure proper image scaling and aspect ratio preservation
+- **Maintained Animations**: Kept floating particle animations around the device frame for visual interest
+- **Performance Optimized**: Real screenshot maintains existing responsive breakpoints and loading performance
+
 ### Hero Section Update v0.2 → v0.3 (July 19, 2025)
 - **Updated Heading**: Changed to "Mama Air. "Breathe Safely for Your Baby"." per client specification
 - **New Subheading**: "Mama Air is personal behaviour companion, empowering mothers to navigate pregnancy safely with the air quality around them."
