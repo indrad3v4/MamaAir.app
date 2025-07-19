@@ -397,71 +397,20 @@
                     Download Mama Air
                 </h2>
                 
-                <div class="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 mb-8">
-                    <!-- Download Button & Text -->
-                    <div class="lg:w-1/2 text-center lg:text-left">
-                        <!-- Urgency Badge -->
-                        <div class="inline-flex items-center bg-amber-100 text-amber-800 text-xs sm:text-sm font-semibold px-3 py-1 rounded-full mb-4">
-                            <i class="fas fa-clock mr-2 text-amber-600" aria-hidden="true"></i>
-                            Limited time: Free for all expecting mothers
-                        </div>
-                        
-                        <p class="text-base sm:text-lg md:text-xl text-slate-600 mb-6 sm:mb-8 max-w-md mx-auto lg:mx-0">
-                            Join 500K+ mothers protecting their babies. Download now and get instant air quality alerts in your area.
-                        </p>
-                        
-                        <!-- Primary CTA Buttons with Ample White Space -->
-                        <div class="space-y-4 mb-8">
-                            <!-- Primary Download Button -->
-                            <a href="https://play.google.com/store/apps/details?id=com.mamaair.app&utm_source=partner" 
-                               class="inline-flex items-center justify-center bg-red-500 hover:bg-red-600 text-white font-bold rounded-2xl px-8 sm:px-10 py-5 shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl min-h-[56px] touch-manipulation transform active:scale-95 w-full sm:w-auto"
-                               onclick="gtag('event', 'play_badge_click', {'utm_source': 'partner', 'button_variant': 'primary_red'});"
-                               aria-label="Download Mama Air from Google Play Store">
-                                <i class="fab fa-google-play mr-4 text-2xl" aria-hidden="true"></i>
-                                <div class="text-left">
-                                    <div class="text-xs sm:text-sm opacity-90 leading-tight font-medium">Get My</div>
-                                    <div class="text-lg sm:text-xl font-black leading-tight tracking-tight">Free App</div>
-                                </div>
-                            </a>
-                            
-                            <!-- Secondary CTA - Lower Commitment -->
-                            <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-                                <a href="#why" 
-                                   class="inline-flex items-center justify-center bg-white hover:bg-gray-50 text-red-500 font-semibold border-2 border-red-500 rounded-xl px-6 py-3 transition-all duration-300 hover:scale-105 min-h-[48px] touch-manipulation"
-                                   onclick="gtag('event', 'secondary_cta_click', {'cta_type': 'learn_more'});">
-                                    <i class="fas fa-info-circle mr-2" aria-hidden="true"></i>
-                                    Learn More
-                                </a>
-                                <a href="#contact" 
-                                   class="inline-flex items-center justify-center bg-teal-600 hover:bg-teal-700 text-white font-semibold rounded-xl px-6 py-3 transition-all duration-300 hover:scale-105 min-h-[48px] touch-manipulation"
-                                   onclick="gtag('event', 'secondary_cta_click', {'cta_type': 'ask_question'});">
-                                    <i class="fas fa-question-circle mr-2" aria-hidden="true"></i>
-                                    Ask Question
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <!-- Directional Cue -->
-                        <div class="flex items-center justify-center lg:justify-start text-slate-400 text-sm mb-4">
-                            <i class="fas fa-arrow-down animate-bounce mr-2" aria-hidden="true"></i>
-                            <span>Tap to scan QR code or learn more below</span>
-                            <i class="fas fa-arrow-down animate-bounce ml-2" aria-hidden="true"></i>
-                        </div>
-                        
-                        <p class="text-xs sm:text-sm text-slate-500 max-w-xs mx-auto lg:mx-0">
-                            Free download • Available for Sub-Saharan regions • iOS version coming soon
-                        </p>
-                    </div>
-                    
-                    <!-- QR Code -->
-                    <div class="lg:w-1/2 flex justify-center">
-                        <div class="bg-neutral-50 p-6 sm:p-8 rounded-xl shadow-lg border border-neutral-200">
-                            <img src="/static/images/qr-code.svg" alt="QR Code for Google Play Store" class="w-24 sm:w-28 md:w-32 h-24 sm:h-28 md:h-32 mx-auto mb-3 sm:mb-4" loading="lazy">
-                            <p class="text-xs sm:text-sm text-slate-600 font-medium">Scan to download</p>
-                            <p class="text-xs text-slate-500 mt-1">Works with any QR scanner</p>
-                        </div>
-                    </div>
-                </div>
+                <p class="mt-4 text-center leading-relaxed text-base sm:text-lg text-slate-700 max-w-md mx-auto">
+                    Hey mama-to-be, want a healthy baby but worried about the air you breathe?
+                </p>
+
+                <button 
+                    class="mt-6 w-full max-w-md mx-auto py-4 px-8 text-lg font-semibold rounded-lg bg-orange-500 hover:bg-orange-600 text-white focus:outline-none focus:ring-4 focus:ring-orange-300 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl touch-manipulation"
+                    onclick="gtag('event', 'cta_click', {'button_variant': 'orange_primary', 'utm_source': 'download_section'});"
+                    aria-label="Download MamaAir mobile app">
+                    Download MamaAir Now
+                </button>
+
+                <p class="mt-3 text-center text-sm text-gray-500 max-w-sm mx-auto">
+                    Available for Sub-Saharan regions. iOS version coming soon.
+                </p>
             </div>
         </section>
 
