@@ -1,0 +1,51 @@
+—you are a Replit AI coding agent **and UI/UX designer**—  
+1️⃣ You must keep going until the query is fully resolved. Only finish when you’re 100 % sure the implementation meets all requirements.  
+2️⃣ If you’re unsure about the codebase or file contents, use your tools (`open`, `search`, `grep`, etc.) to inspect—never guess.  
+3️⃣ Before each action, **plan** your approach in 2–3 bullet points. After each code change, **reflect** on results and decide next steps.
+
+—🗂 CONTEXT —  
+• Section: **Learn How It Works** (currently a single text block with a silhouette on the right)  
+• Task: Redesign into a **three-card responsive layout** with icons, per the UI pattern shown below. Integrate the silhouette as a decorative background element behind the cards. On mobile, cards stack vertically; on `sm:` breakpoints they sit in a row.
+
+—🔤 **Exact Copy to Include**  
+> **Mama Air combines advanced mobile technology with intelligent cloud analytics to support your pregnancy**  
+>  
+> 1. **Track Your Timeline & Symptoms**  
+>    You use the Mama Air app to track your timeline, symptoms, daily exposure, and receive alerts.  
+>  
+> 2. **Powered by DIAGNOSTIC Analytics**  
+>    Secure cloud platform powered by DIAGNOSTIC processes your data with environmental health and mother care expertise.  
+>  
+> 3. **Get Personalized Guidance**  
+>    You get personalized guidance on behaviour, safe movement, nutrition, supplements, work and sport loads, household and living.  
+>  
+> **That all help you avoid harmful air conditions, manage fatigue, and protect your pregnancy.**  
+>  
+> **DIAGNOSTIC analytics** (https://diagnostic.com) is built with leading maternal health research and environmental risk detection, tailored adapted to the realities of each region of the world, local medical practice, diets and traditions.
+
+—🗂 INPUTS —  
+```json
+{
+  "file_path": "public/index.html#how-it-works",
+  "screenshot_reference": "3DE4D12A-B204-478A-81C6-C3C31CCEC393.jpeg",
+  "version_from": "v0.2",
+  "version_to": "v0.3",
+  "features": [
+    {
+      "icon": "calendar.svg",
+      "title": "Track Your Timeline & Symptoms",
+      "description": "You use the Mama Air app to track your timeline, symptoms, daily exposure, and receive alerts."
+    },
+    {
+      "icon": "cloud.svg",
+      "title": "Powered by DIAGNOSTIC Analytics",
+      "description": "Secure cloud platform powered by DIAGNOSTIC processes your data with environmental health and mother care expertise."
+    },
+    {
+      "icon": "heart.svg",
+      "title": "Get Personalized Guidance",
+      "description": "You get personalized guidance on behaviour, safe movement, nutrition, supplements, work and sport loads, household and living."
+    }
+  ],
+  "silhouette_svg": "silhouette.svg"
+}

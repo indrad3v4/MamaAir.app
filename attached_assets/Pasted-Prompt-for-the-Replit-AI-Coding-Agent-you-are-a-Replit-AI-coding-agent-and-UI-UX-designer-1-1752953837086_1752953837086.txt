@@ -1,0 +1,93 @@
+Prompt for the Replit AI Coding Agent
+
+—you are a Replit AI coding agent **and UI/UX designer**—  
+1️⃣ You must keep going until the query is fully resolved. Only finish when you’re 100 % sure the implementation meets all requirements.  
+2️⃣ If you’re unsure about the codebase or file contents, use your tools (`open`, `search`, `grep`, etc.) to inspect—never guess.  
+3️⃣ Before each action, **plan** your approach in 2–3 bullet points. After each code change, **reflect** on results and decide next steps.
+
+—🗂 CONTEXT —  
+• Section: **Learn How It Works** (currently a single text block with a silhouette on the right)  
+• Task: Redesign into a **three-card responsive layout** with icons, per the UI pattern shown below. Integrate the silhouette as a decorative background element behind the cards. On mobile, cards stack vertically; on `sm:` breakpoints they sit in a row.
+
+—🔤 **Exact Copy to Include**  
+> **Mama Air combines advanced mobile technology with intelligent cloud analytics to support your pregnancy**  
+>  
+> 1. **Track Your Timeline & Symptoms**  
+>    You use the Mama Air app to track your timeline, symptoms, daily exposure, and receive alerts.  
+>  
+> 2. **Powered by DIAGNOSTIC Analytics**  
+>    Secure cloud platform powered by DIAGNOSTIC processes your data with environmental health and mother care expertise.  
+>  
+> 3. **Get Personalized Guidance**  
+>    You get personalized guidance on behaviour, safe movement, nutrition, supplements, work and sport loads, household and living.  
+>  
+> **That all help you avoid harmful air conditions, manage fatigue, and protect your pregnancy.**  
+>  
+> **DIAGNOSTIC analytics** (https://diagnostic.com) is built with leading maternal health research and environmental risk detection, tailored adapted to the realities of each region of the world, local medical practice, diets and traditions.
+
+—🗂 INPUTS —  
+```json
+{
+  "file_path": "public/index.html#how-it-works",
+  "screenshot_reference": "3DE4D12A-B204-478A-81C6-C3C31CCEC393.jpeg",
+  "version_from": "v0.2",
+  "version_to": "v0.3",
+  "features": [
+    {
+      "icon": "calendar.svg",
+      "title": "Track Your Timeline & Symptoms",
+      "description": "You use the Mama Air app to track your timeline, symptoms, daily exposure, and receive alerts."
+    },
+    {
+      "icon": "cloud.svg",
+      "title": "Powered by DIAGNOSTIC Analytics",
+      "description": "Secure cloud platform powered by DIAGNOSTIC processes your data with environmental health and mother care expertise."
+    },
+    {
+      "icon": "heart.svg",
+      "title": "Get Personalized Guidance",
+      "description": "You get personalized guidance on behaviour, safe movement, nutrition, supplements, work and sport loads, household and living."
+    }
+  ],
+  "silhouette_svg": "silhouette.svg"
+}
+
+—🗂 CONSTRAINTS —
+	•	Payload ≤ 100 KB
+	•	Tailwind v3 + Alpine.js
+	•	Mobile-first, WCAG AA accessible
+	•	Maintain CTR ≥ 8 %, LCP ≤ 2.5 s, Lighthouse ≥ 90
+
+—🔍 RESEARCH —
+Use internet search to collect 2–3 examples of:
+• Three-card horizontal layouts in Tailwind (e.g., grid grid-cols-1 sm:grid-cols-3 gap-6)
+• Icon-infographic patterns with subtle background graphics
+• Responsive integration of decorative SVG elements behind cards
+
+—🪜 EXECUTION PLAN —
+	1.	Analyze & Plan
+	•	Open public/index.html#how-it-works and remove the old single-block markup.
+	•	Sketch the new <section> wrapper: a div for the silhouette background, plus a grid or flex container for cards.
+	2.	Gather Resources
+	•	Find Tailwind utilities: grid grid-cols-1 sm:grid-cols-3, relative, absolute, z-10/z-0.
+	•	Identify appropriate sizes for icons and the silhouette.
+	3.	Implement Iteratively
+	•	Create <section class="relative px-4 py-8"> with an absolutely-positioned silhouette SVG (opacity-10).
+	•	Inside, add <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 relative z-10"> containing three <div> cards:
+
+<div class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-start">
+  <img src="/icons/calendar.svg" alt="" class="w-8 h-8 mb-4">
+  <h3 class="text-lg font-bold">Track Your Timeline & Symptoms</h3>
+  <p class="mt-2 text-sm leading-relaxed">You use the Mama Air app to track your timeline, symptoms, daily exposure, and receive alerts.</p>
+</div>
+<!-- repeat for each feature -->
+
+
+	4.	Test & Validate
+	•	Preview on mobile and desktop: ensure cards stack → row, icons align, silhouette stays behind.
+	•	Run Lighthouse and accessibility audits (check SVG alt-text, contrast).
+	5.	Refine & Document
+	•	Tweak spacing (gap-6, p-6) or silhouette opacity if cards feel washed out.
+	•	Update CHANGELOG.md under v0.3 with “Redesigned ‘How It Works’ into icon-led three-card layout.”
+
+This gives you both the UI-expert rationale and a turnkey prompt for your Replit agent.

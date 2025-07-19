@@ -11,15 +11,16 @@ Preferred communication style: Simple, everyday language.
 ## Recent Changes (Latest Session - July 19, 2025)
 
 ### "How It Works" Section Redesign v0.2 → v0.3 (July 19, 2025)
-- **Two-Column Responsive Layout**: Transformed from vertical numbered steps to responsive two-column design
-  - Left column: Three clean feature blocks stacked vertically with exact client-specified content
-  - Right column: Portrait of pregnant woman (centered and scaled to fit column)
-  - Mobile-first design: Image first, then features on mobile (≤ md), side-by-side on desktop
-  - Clean feature blocks with exact descriptions: "Track Your Timeline & Symptoms", "Powered by DIAQNOSTIC Analytics", "Get Personalized Guidance"
-  - Simplified formatting: removed card styling for cleaner, minimal design matching target specification
-  - Responsive image with proper alt text for accessibility and SEO optimization
-  - Maintained DIAQNOSTIC attribution and brand consistency with existing design
-  - Used flex flex-col md:flex-row pattern with order classes for optimal mobile UX
+- **Three-Card Responsive Layout**: Transformed from vertical numbered steps to icon-led three-card grid design
+  - Mobile-first grid layout: 1 column mobile, 3 columns on sm+ breakpoints (grid-cols-1 sm:grid-cols-3)
+  - Feature cards with SVG icons: Calendar (timeline tracking), Cloud (analytics), Heart (guidance)
+  - Decorative silhouette background: pregnant woman portrait at 5% opacity behind cards using absolute positioning
+  - Enhanced content structure with intro and closing paragraphs per client specification
+  - Corrected branding: "DIAGNOSTIC Analytics" (updated spelling) with link to diagnostic.com
+  - Card hover effects with shadow transitions for improved user interaction
+  - Complete content integration: exact copy including intro, features, closing, and attribution text
+  - Maintained WCAG AA accessibility with proper alt text, aria-hidden for decorative elements
+  - Used relative z-10 positioning to ensure cards stay above background silhouette
 
 ### Footer Simplification v0.1 to v0.2 (July 19, 2025)
 - **Minimalist Footer Design**: Updated landing page footer per client feedback

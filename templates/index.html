@@ -258,64 +258,84 @@
             </div>
         </section>
 
-        <!-- How It Works Section - Two Column Layout -->
-        <section id="how" class="py-12 sm:py-16 md:py-20 lg:py-24 bg-neutral-50">
-            <div class="max-w-6xl mx-auto px-4">
+        <!-- How It Works Section - Three Card Layout -->
+        <section id="how" class="relative py-12 sm:py-16 md:py-20 lg:py-24 bg-neutral-50 overflow-hidden">
+            
+            <!-- Decorative Background Silhouette -->
+            <div class="absolute inset-0 flex items-center justify-center opacity-5">
+                <img 
+                    src="/static/pregnant-woman-portrait.jpeg" 
+                    alt="" 
+                    class="w-96 h-auto object-cover"
+                    aria-hidden="true"
+                >
+            </div>
+            
+            <div class="relative z-10 max-w-6xl mx-auto px-4">
                 <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-800 mb-3 sm:mb-4 text-center">
                     How It Works
                 </h2>
-                <p class="text-base sm:text-lg md:text-xl text-slate-600 leading-relaxed mb-8 sm:mb-10 md:mb-12 text-center max-w-2xl mx-auto">
-                    Just 3 simple steps to solve your concerns about air quality during pregnancy
+                
+                <!-- Introduction Text -->
+                <p class="text-base sm:text-lg text-slate-700 leading-relaxed mb-8 sm:mb-10 text-center max-w-4xl mx-auto font-medium">
+                    Mama Air combines advanced mobile technology with intelligent cloud analytics to support your pregnancy
                 </p>
                 
-                <!-- Two Column Responsive Layout -->
-                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                <!-- Three Card Grid Layout -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8 sm:mb-10">
                     
-                    <!-- Image Column - Order 1 on mobile, Order 2 on desktop -->
-                    <div class="w-full md:w-1/2 order-1 md:order-2">
-                        <img 
-                            src="/static/pregnant-woman-portrait.jpeg" 
-                            alt="Pregnant woman looking thoughtfully at the sky, representing hope and care for her baby's health" 
-                            class="w-full h-auto rounded-lg shadow-lg object-cover max-w-md mx-auto"
-                        >
+                    <!-- Card 1: Track Timeline -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-start hover:shadow-xl transition-shadow duration-300">
+                        <!-- Calendar Icon -->
+                        <svg class="w-8 h-8 mb-4 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Track Your Timeline & Symptoms</h3>
+                        <p class="text-sm leading-relaxed text-slate-600">
+                            You use the Mama Air app to track your timeline, symptoms, daily exposure, and receive alerts.
+                        </p>
                     </div>
                     
-                    <!-- Features Column - Order 2 on mobile, Order 1 on desktop -->
-                    <div class="w-full md:w-1/2 order-2 md:order-1 space-y-6">
-                        
-                        <!-- Feature 1 -->
-                        <div>
-                            <h3 class="text-xl font-bold text-slate-800 mb-2">Track Your Timeline & Symptoms</h3>
-                            <p class="text-sm leading-relaxed text-slate-600">
-                                You use the Mama Air app to track your timeline, symptoms, daily exposure, and receive alerts.
-                            </p>
-                        </div>
-                        
-                        <!-- Feature 2 -->
-                        <div>
-                            <h3 class="text-xl font-bold text-slate-800 mb-2">Powered by DIAQNOSTIC Analytics</h3>
-                            <p class="text-sm leading-relaxed text-slate-600">
-                                Secure cloud platform powered by DIAQNOSTIC analytics processes your data with environmental health and mother care expertise.
-                            </p>
-                        </div>
-                        
-                        <!-- Feature 3 -->
-                        <div>
-                            <h3 class="text-xl font-bold text-slate-800 mb-2">Get Personalized Guidance</h3>
-                            <p class="text-sm leading-relaxed text-slate-600">
-                                You get personalized guidance on behavior, safe movement, nutrition, supplements, work and sport loads, household and living.
-                            </p>
-                        </div>
-                        
+                    <!-- Card 2: Analytics -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-start hover:shadow-xl transition-shadow duration-300">
+                        <!-- Cloud Icon -->
+                        <svg class="w-8 h-8 mb-4 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"></path>
+                        </svg>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Powered by DIAGNOSTIC Analytics</h3>
+                        <p class="text-sm leading-relaxed text-slate-600">
+                            Secure cloud platform powered by DIAGNOSTIC processes your data with environmental health and mother care expertise.
+                        </p>
                     </div>
+                    
+                    <!-- Card 3: Guidance -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-start hover:shadow-xl transition-shadow duration-300">
+                        <!-- Heart Icon -->
+                        <svg class="w-8 h-8 mb-4 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Get Personalized Guidance</h3>
+                        <p class="text-sm leading-relaxed text-slate-600">
+                            You get personalized guidance on behaviour, safe movement, nutrition, supplements, work and sport loads, household and living.
+                        </p>
+                    </div>
+                    
                 </div>
                 
-                <!-- DIAQNOSTIC Attribution -->
-                <div class="text-center mt-8 sm:mt-10 md:mt-12">
+                <!-- Closing Text -->
+                <p class="text-base sm:text-lg text-slate-700 leading-relaxed mb-6 sm:mb-8 text-center max-w-4xl mx-auto font-medium">
+                    That all help you avoid harmful air conditions, manage fatigue, and protect your pregnancy.
+                </p>
+                
+                <!-- DIAGNOSTIC Attribution -->
+                <div class="text-center">
+                    <p class="text-sm text-slate-600 leading-relaxed max-w-4xl mx-auto mb-4">
+                        <strong class="text-teal-700">DIAGNOSTIC analytics</strong> is built with leading maternal health research and environmental risk detection, tailored adapted to the realities of each region of the world, local medical practice, diets and traditions.
+                    </p>
                     <div class="inline-flex items-center bg-white px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow-sm border">
                         <span class="text-xs sm:text-sm text-slate-600 mr-2">Powered by</span>
-                        <a href="https://diaqnostic.com/" class="text-xs sm:text-sm font-semibold text-teal-deep hover:text-teal-800 transition-colors">
-                            DIAQNOSTIC analytics
+                        <a href="https://diagnostic.com" class="text-xs sm:text-sm font-semibold text-teal-deep hover:text-teal-800 transition-colors">
+                            DIAGNOSTIC analytics
                         </a>
                     </div>
                 </div>
