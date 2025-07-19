@@ -45,6 +45,15 @@ Preferred communication style: Simple, everyday language.
   - Streamlined to pure informational content with email contact option
   - Significantly reduced JavaScript footprint and page complexity
 
+### "Every Breath Matters" Section Removal v0.2 (July 19, 2025)
+- **Complete Section Removal**: Eliminated entire "Protection Promise Section" per client feedback
+  - Removed "Every Breath Matters" heading and background image  
+  - Removed all key promise bullet points (Real-Time Protection, Neighborhood Accuracy, Peace of Mind)
+  - Removed dual call-to-action buttons and analytics tracking (utm_source=promise, promise_section)
+  - Removed floating statistics display (500K+ Protected Mothers)
+  - Maintained proper spacing between hero section and policies section
+  - Reduced page complexity and improved loading performance
+
 ### Policies Section Update v0.1 to v0.2 (July 19, 2025)
 - **Header & Description Update**: Changed section title and messaging per client specs
   - Updated heading from "Policies" to "Mama Air Policies"
