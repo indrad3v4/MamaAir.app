@@ -76,13 +76,15 @@ Preferred communication style: Simple, everyday language.
 ### User Reviews → Leader Supports Transformation v0.2 (July 19, 2025)
 - **Professional Endorsements Overhaul**: Completely replaced "User Reviews" section with "Leader Supports" per client requirements
   - Removed entire testimonials section (user cards, star ratings, average rating display)
-  - Implemented professional endorsement cards with exact client-provided content (word-for-word)
-  - Added 9 international expert endorsements covering Public Health, Women's Health, Air Quality, and Maternal Health
-  - Featured experts from Australia, US, India, Ecuador, UK, Nigeria, Tanzania, Kenya with proper credentials
-  - Clean card-based layout with name/location, professional titles, and italicized quotes
-  - Mobile-first responsive design with proper spacing, typography, and hover effects
-  - Used light gradient background (slate-50 to white) for professional, trustworthy appearance
-  - Enhanced credibility by showcasing international expert validation and professional recognition
+  - Implemented 2×2 responsive grid layout with 4 featured international experts (Australia, US, India, Ecuador)
+  - Added circular gradient profile avatars with initials instead of placeholder photos
+  - Enhanced with Alpine.js expandable "Read More" functionality for quote previews
+  - Mobile-first design: 1 column on mobile, 2 columns on tablet/desktop (grid-cols-1 sm:grid-cols-2)
+  - Smooth transitions and animations for expand/collapse with proper Alpine.js x-transition
+  - Clean card design with centered profile headers, distinct color gradients per expert
+  - Professional typography hierarchy: bold names, subtle locations, teal credentials
+  - Enhanced credibility through expert validation covering Public Health, Women's Health, Air Quality, and Climate Change
+  - Optimized for WCAG accessibility with proper semantic HTML and keyboard navigation
 
 ### Policies Section Update v0.1 to v0.2 (July 19, 2025)
 - **Header & Description Update**: Changed section title and messaging per client specs

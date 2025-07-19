@@ -341,104 +341,183 @@
                     Learn how opinion leaders endorse our approach.
                 </p>
                 
-                <div class="space-y-6 md:space-y-8">
+                <!-- 2x2 Grid Layout -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    
                     <!-- Francine Yao Fu -->
-                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 sm:p-8 hover:shadow-md transition-all duration-300">
-                        <div class="mb-4">
-                            <h3 class="text-lg font-bold text-slate-800 mb-1">Francine Yao Fu (Australia)</h3>
-                            <p class="text-sm sm:text-base text-teal-600 font-medium italic">Master of Public Health | Public Health Researcher | Community Health</p>
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-all duration-300" x-data="{ expanded: false }">
+                        <!-- Profile Header -->
+                        <div class="text-center mb-4">
+                            <div class="w-20 h-20 bg-gradient-to-br from-teal-500 to-teal-700 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <span class="text-2xl font-bold text-white">FY</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-800">Francine Yao Fu</h3>
+                            <p class="text-sm text-slate-600 mb-2">Australia</p>
+                            <p class="text-xs text-teal-600 font-medium">Master of Public Health | Public Health Researcher | Community Health</p>
                         </div>
-                        <blockquote class="text-sm sm:text-base text-slate-700 leading-relaxed italic">
-                            "What you are doing is very meaningful to the women's community and empowering women's health. I am very impressed."
-                        </blockquote>
+                        
+                        <!-- Quote Preview -->
+                        <div class="text-sm text-slate-700 leading-relaxed">
+                            <p class="italic mb-3">
+                                "What you are doing is very meaningful to the women's community and empowering women's health.
+                                <span x-show="!expanded">..."</span>
+                            </p>
+                            
+                            <!-- Expandable Full Quote -->
+                            <div x-show="expanded" 
+                                 class="overflow-hidden transition-all duration-500 ease-in-out"
+                                 x-transition:enter="transition ease-out duration-300"
+                                 x-transition:enter-start="opacity-0 max-h-0"
+                                 x-transition:enter-end="opacity-100 max-h-96"
+                                 x-transition:leave="transition ease-in duration-200"
+                                 x-transition:leave-start="opacity-100 max-h-96"
+                                 x-transition:leave-end="opacity-0 max-h-0">
+                                <p class="italic">I am very impressed."</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Read More Button -->
+                        <button @click="expanded = !expanded" 
+                                class="inline-flex items-center mt-3 text-teal-600 hover:text-teal-800 font-medium text-sm transition-colors duration-200">
+                            <span x-text="expanded ? 'Read Less' : 'Read More'"></span>
+                            <svg class="w-4 h-4 ml-1 transform transition-transform duration-200" 
+                                 :class="expanded ? 'rotate-180' : ''" 
+                                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
                     </div>
 
                     <!-- Natalie D. Hanson -->
-                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 sm:p-8 hover:shadow-md transition-all duration-300">
-                        <div class="mb-4">
-                            <h3 class="text-lg font-bold text-slate-800 mb-1">Natalie D. Hanson, Ph.D (Chicago, US)</h3>
-                            <p class="text-sm sm:text-base text-teal-600 font-medium italic">Driving innovation & growth in Women's Health</p>
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-all duration-300" x-data="{ expanded: false }">
+                        <!-- Profile Header -->
+                        <div class="text-center mb-4">
+                            <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-700 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <span class="text-2xl font-bold text-white">NH</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-800">Natalie D. Hanson, Ph.D.</h3>
+                            <p class="text-sm text-slate-600 mb-2">Chicago, US</p>
+                            <p class="text-xs text-teal-600 font-medium">Driving innovation & growth in Women's Health</p>
                         </div>
-                        <blockquote class="text-sm sm:text-base text-slate-700 leading-relaxed italic">
-                            "I think your approach of the intersection of climate issue and femtech is an interesting one!"
-                        </blockquote>
+                        
+                        <!-- Quote Preview -->
+                        <div class="text-sm text-slate-700 leading-relaxed">
+                            <p class="italic mb-3">
+                                "I think your approach of the intersection of climate issue and femtech
+                                <span x-show="!expanded">..."</span>
+                            </p>
+                            
+                            <!-- Expandable Full Quote -->
+                            <div x-show="expanded" 
+                                 class="overflow-hidden transition-all duration-500 ease-in-out"
+                                 x-transition:enter="transition ease-out duration-300"
+                                 x-transition:enter-start="opacity-0 max-h-0"
+                                 x-transition:enter-end="opacity-100 max-h-96"
+                                 x-transition:leave="transition ease-in duration-200"
+                                 x-transition:leave-start="opacity-100 max-h-96"
+                                 x-transition:leave-end="opacity-0 max-h-0">
+                                <p class="italic">is an interesting one!"</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Read More Button -->
+                        <button @click="expanded = !expanded" 
+                                class="inline-flex items-center mt-3 text-teal-600 hover:text-teal-800 font-medium text-sm transition-colors duration-200">
+                            <span x-text="expanded ? 'Read Less' : 'Read More'"></span>
+                            <svg class="w-4 h-4 ml-1 transform transition-transform duration-200" 
+                                 :class="expanded ? 'rotate-180' : ''" 
+                                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
                     </div>
 
                     <!-- Barun Aggarwal -->
-                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 sm:p-8 hover:shadow-md transition-all duration-300">
-                        <div class="mb-4">
-                            <h3 class="text-lg font-bold text-slate-800 mb-1">Barun Aggarwal (Delhi, India)</h3>
-                            <p class="text-sm sm:text-base text-teal-600 font-medium italic">Founder BreatheEasy | WELL AP, RESET AP | Global IAQ Leader</p>
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-all duration-300" x-data="{ expanded: false }">
+                        <!-- Profile Header -->
+                        <div class="text-center mb-4">
+                            <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <span class="text-2xl font-bold text-white">BA</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-800">Barun Aggarwal</h3>
+                            <p class="text-sm text-slate-600 mb-2">Delhi, India</p>
+                            <p class="text-xs text-teal-600 font-medium">Founder BreatheEasy | WELL AP, RESET AP | Global IAQ Leader</p>
                         </div>
-                        <blockquote class="text-sm sm:text-base text-slate-700 leading-relaxed italic">
-                            "That's a great product…much needed in many parts of the world. We should collaborate on helping the to-be moms breathe better air!"
-                        </blockquote>
+                        
+                        <!-- Quote Preview -->
+                        <div class="text-sm text-slate-700 leading-relaxed">
+                            <p class="italic mb-3">
+                                "That's a great product…much needed in many parts of the world.
+                                <span x-show="!expanded">..."</span>
+                            </p>
+                            
+                            <!-- Expandable Full Quote -->
+                            <div x-show="expanded" 
+                                 class="overflow-hidden transition-all duration-500 ease-in-out"
+                                 x-transition:enter="transition ease-out duration-300"
+                                 x-transition:enter-start="opacity-0 max-h-0"
+                                 x-transition:enter-end="opacity-100 max-h-96"
+                                 x-transition:leave="transition ease-in duration-200"
+                                 x-transition:leave-start="opacity-100 max-h-96"
+                                 x-transition:leave-end="opacity-0 max-h-0">
+                                <p class="italic">We should collaborate on helping the to-be moms breathe better air!"</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Read More Button -->
+                        <button @click="expanded = !expanded" 
+                                class="inline-flex items-center mt-3 text-teal-600 hover:text-teal-800 font-medium text-sm transition-colors duration-200">
+                            <span x-text="expanded ? 'Read Less' : 'Read More'"></span>
+                            <svg class="w-4 h-4 ml-1 transform transition-transform duration-200" 
+                                 :class="expanded ? 'rotate-180' : ''" 
+                                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
                     </div>
 
                     <!-- Lisa Maria Madera -->
-                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 sm:p-8 hover:shadow-md transition-all duration-300">
-                        <div class="mb-4">
-                            <h3 class="text-lg font-bold text-slate-800 mb-1">Lisa Maria Madera (Pichincha, Ecuador)</h3>
-                            <p class="text-sm sm:text-base text-teal-600 font-medium italic">Mother, Educator, Community weaver. Climate Parent Fellow 2024</p>
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-all duration-300" x-data="{ expanded: false }">
+                        <!-- Profile Header -->
+                        <div class="text-center mb-4">
+                            <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-green-700 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <span class="text-2xl font-bold text-white">LM</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-800">Lisa Maria Madera</h3>
+                            <p class="text-sm text-slate-600 mb-2">Quito, Ecuador</p>
+                            <p class="text-xs text-teal-600 font-medium">Mother, Educator, Community weaver. Climate Parent Fellow 2024</p>
                         </div>
-                        <blockquote class="text-sm sm:text-base text-slate-700 leading-relaxed italic">
-                            "Your work sounds really interesting and important. I am really interested in applying diagnostic environmental tools and how we might leverage that information to create safer environments for our children as we face the challenges of climate change and environmental degradation."
-                        </blockquote>
-                    </div>
-
-                    <!-- Laura Spence -->
-                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 sm:p-8 hover:shadow-md transition-all duration-300">
-                        <div class="mb-4">
-                            <h3 class="text-lg font-bold text-slate-800 mb-1">Laura Spence (Sheffield, UK)</h3>
-                            <p class="text-sm sm:text-base text-teal-600 font-medium italic">Midwife. Educator. Advocate. Founder of NeuroNatal</p>
+                        
+                        <!-- Quote Preview -->
+                        <div class="text-sm text-slate-700 leading-relaxed">
+                            <p class="italic mb-3">
+                                "Your work sounds really interesting and important. I am really interested in applying diagnostic
+                                <span x-show="!expanded">..."</span>
+                            </p>
+                            
+                            <!-- Expandable Full Quote -->
+                            <div x-show="expanded" 
+                                 class="overflow-hidden transition-all duration-500 ease-in-out"
+                                 x-transition:enter="transition ease-out duration-300"
+                                 x-transition:enter-start="opacity-0 max-h-0"
+                                 x-transition:enter-end="opacity-100 max-h-96"
+                                 x-transition:leave="transition ease-in duration-200"
+                                 x-transition:leave-start="opacity-100 max-h-96"
+                                 x-transition:leave-end="opacity-0 max-h-0">
+                                <p class="italic">environmental tools and how we might leverage that information to create safer environments for our children as we face the challenges of climate change and environmental degradation."</p>
+                            </div>
                         </div>
-                        <blockquote class="text-sm sm:text-base text-slate-700 leading-relaxed italic">
-                            "Your work sounds fascinating and so important. The impact of environmental factors like air pollution on maternal and fetal health is still so under-discussed, yet hugely significant."
-                        </blockquote>
-                    </div>
-
-                    <!-- Dr. Mories Atoki -->
-                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 sm:p-8 hover:shadow-md transition-all duration-300">
-                        <div class="mb-4">
-                            <h3 class="text-lg font-bold text-slate-800 mb-1">Dr. Mories Atoki (Lagos, Nigeria)</h3>
-                            <p class="text-sm sm:text-base text-teal-600 font-medium italic">CEO – ABCHealth | Board Director | Health & Education Advocate</p>
-                        </div>
-                        <blockquote class="text-sm sm:text-base text-slate-700 leading-relaxed italic">
-                            "Personalised environmental risk tracking… what you do sounds amazing!"
-                        </blockquote>
-                    </div>
-
-                    <!-- Sosthenes Bagumbe -->
-                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 sm:p-8 hover:shadow-md transition-all duration-300">
-                        <div class="mb-4">
-                            <h3 class="text-lg font-bold text-slate-800 mb-1">Sosthenes (Elias) Bagumbe (Dodoma, Tanzania)</h3>
-                            <p class="text-sm sm:text-base text-teal-600 font-medium italic">Gen. Secretary of Pan African Health Informatics Association (HELINA)</p>
-                        </div>
-                        <blockquote class="text-sm sm:text-base text-slate-700 leading-relaxed italic">
-                            "I am actually very interested in your approach."
-                        </blockquote>
-                    </div>
-
-                    <!-- Phyllis Kiburi -->
-                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 sm:p-8 hover:shadow-md transition-all duration-300">
-                        <div class="mb-4">
-                            <h3 class="text-lg font-bold text-slate-800 mb-1">Phyllis (Muruku) Kiburi (Nairobi, Kenya)</h3>
-                            <p class="text-sm sm:text-base text-teal-600 font-medium italic">Maternal-Child Health | Environmental & Public Health</p>
-                        </div>
-                        <blockquote class="text-sm sm:text-base text-slate-700 leading-relaxed italic">
-                            "It is impressive to see how DIAGNOSTIC translates complex air quality data into personalised health recommendations. I am very impressed with the Mama Air app's focus on supporting African women in real high-risk environments."
-                        </blockquote>
-                    </div>
-
-                    <!-- Moona Kayawo -->
-                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 sm:p-8 hover:shadow-md transition-all duration-300">
-                        <div class="mb-4">
-                            <h3 class="text-lg font-bold text-slate-800 mb-1">Moona Kayawo (Nairobi, Kenya)</h3>
-                            <p class="text-sm sm:text-base text-teal-600 font-medium italic">Digital/Public Health | Mandela Washington Fellow 2024 & Climate Change</p>
-                        </div>
-                        <blockquote class="text-sm sm:text-base text-slate-700 leading-relaxed italic">
-                            "Good to hear how you are utilizing AI and digital health interventions to solve public health challenges."
-                        </blockquote>
+                        
+                        <!-- Read More Button -->
+                        <button @click="expanded = !expanded" 
+                                class="inline-flex items-center mt-3 text-teal-600 hover:text-teal-800 font-medium text-sm transition-colors duration-200">
+                            <span x-text="expanded ? 'Read Less' : 'Read More'"></span>
+                            <svg class="w-4 h-4 ml-1 transform transition-transform duration-200" 
+                                 :class="expanded ? 'rotate-180' : ''" 
+                                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>

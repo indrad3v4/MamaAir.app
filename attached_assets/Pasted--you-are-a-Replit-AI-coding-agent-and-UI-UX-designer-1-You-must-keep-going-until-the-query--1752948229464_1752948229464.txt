@@ -1,0 +1,73 @@
+—you are a Replit AI coding agent **and UI/UX designer**—  
+1️⃣ You must keep going until the query is fully resolved. Only finish when you’re 100 % sure the implementation meets all requirements.  
+2️⃣ If you’re unsure about the codebase or file contents, use your tools (`open`, `search`, `grep` etc.) to inspect—never guess.  
+3️⃣ Before each action, **plan** your approach in 2–3 bullet points. After each code change, **reflect** on results and decide next steps.  
+
+—🗂 CONTEXT —  
+• Task: Replace the “Leader Supports” section list with a **2×2 grid of cards** (mobile-first responsive) per the provided mockup image. Each card shows a circular avatar, name, title/location, and quote excerpt with a “Read More” link. When tapped, expand inline to show the full quote.  
+• Screenshot Reference:  
+  `A_digital_graphic_design_layout_features_four_opin.png` (the ideal grid layout with four cards under “Leader Supports”)  
+
+—🗂 INPUTS —  
+```json
+{
+  "file_path": "public/index.html#user-feedback",
+  "screenshot_reference": "A_digital_graphic_design_layout_features_four_opin.png",
+  "version_from": "v0.1",
+  "version_to": "v0.2",
+  "endorsements": [
+    {
+      "name": "Francine Yao Fu",
+      "location": "Australia",
+      "title": "Master of Public Health | Public Health Researcher | Community Health",
+      "quote": "What you are doing is very meaningful to the women's community and empowering women's health. I am very impressed."
+    },
+    {
+      "name": "Natalie D. Hanson, Ph.D.",
+      "location": "Chicago, US",
+      "title": "Driving innovation & growth in Women's Health",
+      "quote": "I think your approach of the intersection of climate issue and femtech is an interesting one!"
+    },
+    {
+      "name": "Barun Aggarwal",
+      "location": "Delhi, India",
+      "title": "Founder BreatheEasy | WELL AP, RESET AP | Global IAQ Leader",
+      "quote": "That’s a great product…much needed in many parts of the world. We should collaborate on helping the to-be moms breathe better air!"
+    },
+    {
+      "name": "Lisa Maria Madera",
+      "location": "Pichincha, Ecuador",
+      "title": "Mother, Educator, Community Weaver. Climate Parent Fellow 2024",
+      "quote": "Your work sounds really interesting and important. I am really interested in applying diagnostic environmental tools and how we might leverage that information to create safer environments for our children as we face the challenges of climate change and environmental degradation."
+    }
+  ]
+}
+
+—✨ CONSTRAINTS & KPI —
+	•	Payload ≤ 100 KB
+	•	Tech: Tailwind v3 + Alpine.js
+	•	Mobile-first, WCAG AA
+	•	CTR ≥ 8 % on CTA
+	•	LCP ≤ 2.5 s, Lighthouse ≥ 90
+
+—🔍 RESEARCH —
+Use internet search to collect 2–3 examples of Tailwind-based responsive card grids with inline expandable content.
+
+—🪜 EXECUTION PLAN —
+	1.	Analyze & Plan
+	•	Inspect current <section id="user-feedback"> and remove existing list.
+	•	Identify where to insert the grid container and Alpine.js hooks for expansion.
+	2.	Gather Resources
+	•	Find Tailwind utilities for responsive 2-column grids (grid-cols-1 sm:grid-cols-2) and card styling.
+	•	Review Alpine.js patterns for inline “Read More” toggles.
+	3.	Implement Iteratively
+	•	Create a <div class="grid grid-cols-1 sm:grid-cols-2 gap-4"> wrapper.
+	•	For each endorsement, render a <div class="bg-white p-4 rounded-lg shadow"> card per the mockup.
+	•	Add <button x-on:click="open = !open">Read More</button> to expand the full quote.
+	4.	Test & Validate
+	•	Preview on mobile and tablet: verify grid collapse/expand behavior and spacing matches the image precisely.
+	•	Run Lighthouse: ensure no regressions in performance or accessibility.
+	5.	Refine & Document
+	•	Adjust spacing (gap-4, p-4) or typography if needed to mirror the mockup.
+	•	Update CHANGELOG.md under v0.2 with the grid-of-cards implementation.
+
