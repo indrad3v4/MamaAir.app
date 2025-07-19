@@ -10,6 +10,16 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes (Latest Session - July 19, 2025)
 
+### Hero Section Update v0.2 → v0.3 (July 19, 2025)
+- **Updated Heading**: Changed to "Mama Air. "Breathe Safely for Your Baby"." per client specification
+- **New Subheading**: "Mama Air is personal behaviour companion, empowering mothers to navigate pregnancy safely with the air quality around them."
+- **Updated Banner Highlight**: Changed to "More than 1,000 professionals support" with heart icon
+- **Language Simplification**: Removed FR and SW toggles, kept only EN button in both desktop and mobile navigation
+- **Background Enhancement**: Removed blue color overlay so text sits directly on photo background for cleaner look
+- **Orange CTA Button**: Changed from red to brand orange (bg-orange-500, hover:bg-orange-600) with simplified "Download MamaAir" text
+- **Footer Tagline**: Updated to "Because the air you breathe shapes the life you carry." for emotional connection
+- **Text Color Adjustment**: Changed subheading and footer text from neutral-200/300 to white for better contrast without overlay
+
 ### "Why Choose Mama Air" Section Redesign v0.2 → v0.3 (July 19, 2025)
 - **Single Cohesive Block Design**: Replaced multi-card grid layout with unified centered content block
   - Centered heading "Why Choose Mama Air" (removed question mark per client spec)

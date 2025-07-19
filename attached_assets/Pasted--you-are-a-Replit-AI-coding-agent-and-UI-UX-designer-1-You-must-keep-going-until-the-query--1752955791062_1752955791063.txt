@@ -1,0 +1,83 @@
+—you are a Replit AI coding agent **and UI/UX designer**—  
+1️⃣ You must keep going until the query is fully resolved. Only finish when you’re 100 % sure the implementation meets all requirements.  
+2️⃣ If you’re unsure about the codebase or file contents, use your tools (`open`, `search`, `grep`, etc.) to inspect—never guess.  
+3️⃣ Before each action, **plan** your approach in 2–3 bullet points. After each code change, **reflect** on results and decide next steps.
+
+—🗂 CONTEXT —  
+• Section: **Hero / Top Banner**  
+• Task: Update the hero from **v0.2 → v0.3** per client feedback:  
+  1. **Heading**: Change to  
+     ```
+     Mama Air. “Breathe Safely for Your Baby”.
+     ```  
+  2. **Subheading**: Replace with  
+     ```
+     Mama Air is personal behaviour companion, empowering mothers to navigate pregnancy safely with the air quality around them.
+     ```  
+  3. **Banner Highlight**: Update both in the navbar and below hero to  
+     ```
+     More than 1,000 professionals support
+     ```  
+  4. **Languages**: Remove FR and SW toggles; keep only the EN button.  
+  5. **Background**: Remove any blue color overlay so the copy sits directly on the real mobile-photo background.  
+  6. **CTA Button**:  
+     - Text:  
+       ```
+       Download MamaAir
+       ```  
+     - Color: Use brand orange (`bg-orange-500` with `hover:bg-orange-600`), **no reds**.  
+  7. **Footer Tagline** below hero:  
+     ```
+     Because the air you breathe shapes the life you carry.
+     ```
+
+—🔤 **Exact Copy to Include**  
+```text
+Hero Title:
+Mama Air. “Breathe Safely for Your Baby”.
+
+Hero Subheading:
+Mama Air is personal behaviour companion, empowering mothers to navigate pregnancy safely with the air quality around them.
+
+Banner Highlight:
+More than 1,000 professionals support
+
+Button:
+Download MamaAir
+
+Footer Tagline:
+Because the air you breathe shapes the life you carry.
+
+—🗂 INPUTS —
+
+{
+  "file_path": "public/index.html#hero",
+  "screenshot_reference": "A8EA3173-2F7E-404B-8980-FF6BD94E0A7A.jpeg",
+  "version_from": "v0.2",
+  "version_to": "v0.3"
+}
+
+—🔍 RESEARCH —
+Use internet search to collect 2–3 examples of:
+• Mobile-first hero layouts with text overlaid on full-bleed images
+• Accessible, high-contrast orange CTA buttons in Tailwind
+• Language-toggle best practices for single-language display
+
+—🪜 EXECUTION PLAN —
+	1.	Analyze & Plan
+	•	Open public/index.html and locate the <section id="hero">.
+	•	Identify all existing hero elements (heading, subheading, highlight banner, toggles, overlay, button).
+	2.	Gather Resources
+	•	Search Tailwind docs for overlay removal (bg-opacity-0) and orange button utilities.
+	•	Find examples of single-button language toggles.
+	3.	Implement Iteratively
+	•	Remove FR/SW buttons, blue overlay, and old banner text.
+	•	Insert the new heading, subheading, banner highlight, button, and tagline with the classes specified.
+	•	Ensure the photo from screenshot_reference is used as the full-width background.
+	4.	Test & Validate
+	•	Preview on mobile and desktop: check text readability over image and button tap area.
+	•	Run Lighthouse: confirm no regressions in performance or accessibility (contrast, alt-text).
+	5.	Refine & Document
+	•	Tweak spacing (py-12, px-6), text shadows or overlays if needed for readability.
+	•	Update CHANGELOG.md under v0.3 with “Revamped hero: updated copy, removed overlay, simplified toggles, new orange CTA.”
+
