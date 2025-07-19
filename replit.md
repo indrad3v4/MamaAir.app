@@ -14,6 +14,7 @@ Preferred communication style: Simple, everyday language.
 - **Three-Card Responsive Layout**: Transformed from vertical numbered steps to icon-led three-card grid design
   - Mobile-first grid layout: 1 column mobile, 3 columns on sm+ breakpoints (grid-cols-1 sm:grid-cols-3)
   - Feature cards with SVG icons: Calendar (timeline tracking), Cloud (analytics), Heart (guidance)
+  - **Step Number Badges**: Added circular numbered badges (1, 2, 3) positioned at top-left corner of each card
   - **Featured Image Placement**: Positioned pregnant woman portrait prominently under intro text, before the three cards
   - Enhanced content structure with intro and closing paragraphs per client specification
   - Corrected branding: "DIAGNOSTIC Analytics" (updated spelling) with link to diagnostic.com
