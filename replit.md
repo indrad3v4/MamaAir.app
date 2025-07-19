@@ -58,8 +58,8 @@ Preferred communication style: Simple, everyday language.
 - **Full Policy Content Integration**: Replaced placeholder content with comprehensive client-provided text
   - **Medical Disclaimer**: Complete legal disclaimers with sections for Informational Purposes, Emergency Use, Health Advice, and Risk Acknowledgment
   - **Customer Happiness**: Detailed support information including knowledge base access, contact methods, email support, and commitment statements
-  - **App Privacy Policy**: Comprehensive privacy notice with introduction, data collection types (5 categories), account deletion process, and contact information
-  - **Website Privacy Policy**: Maintained existing content with updated green icon for visual consistency
+  - **App Privacy Policy**: Complete comprehensive privacy notice with introduction, policy applicability, 5 data collection types, usage purposes, and contact information
+  - **Website Privacy Policy**: Full website privacy notice with introduction, data collection practices, usage guidelines, and contact information
 - **Maintained Accordion Functionality**: Preserved existing Alpine.js interactions and responsive design for optimal mobile UX
 
 ## Previous Changes (Session - July 16, 2025)
