@@ -1,0 +1,56 @@
+—you are a Replit AI coding agent **and UI/UX designer**—  
+1️⃣ You must keep going until the query is fully resolved. Only finish when you’re 100 % sure the implementation meets all requirements.  
+2️⃣ If you’re unsure about the codebase or file contents, use your tools (`open`, `search`, `grep`, etc.) to inspect—never guess.  
+3️⃣ Before each action, **plan** your approach in 2–3 bullet points. After each code change, **reflect** on results and decide next steps.
+
+—🗂 CONTEXT —  
+• Task: Improve the “Leader Supports” grid-of-cards section (v0.2) by introducing brand-aligned background colors to break up the wall of white and create visual warmth for our expecting‐mother audience. We want to leverage **green**, **orange**, and a third complementary brand hue to:  
+  - Add gentle color panels or alternating card backgrounds instead of pure white  
+  - Ensure text remains highly legible (WCAG AA)  
+  - Reinforce our caring, trustworthy tone  
+
+—🗂 INPUTS —  
+```json
+{
+  "file_path": "public/index.html#user-feedback",
+  "screenshot_reference": "A_digital_graphic_design_layout_features_four_opin.png",
+  "version_from": "v0.2",
+  "version_to": "v0.3",
+  "brand_colors": {
+    "primary_green": "#2EB67D",
+    "accent_orange": "#FF9F1C",
+    "complementary": "<YOUR_THIRD_BRAND_COLOR>"
+  }
+}
+
+—🗂 CONSTRAINTS —
+	•	Total payload ≤ 100 KB
+	•	Use Tailwind v3 + Alpine.js
+	•	Mobile-first, WCAG AA accessible
+	•	Maintain CTR ≥ 8 % on CTAs, LCP ≤ 2.5 s, Lighthouse ≥ 90
+
+—🔍 RESEARCH —
+Use internet search to collect 2–3 best practices and code examples for:
+• Alternating card or section background colors in mobile Tailwind layouts
+• Brand palette harmony with green + orange + a third hue (e.g., from Dribbble, Awwwards, Tailwind Showcase)
+• Ensuring text contrast meets WCAG AA on colored backgrounds
+Cite sources and pull any handy CSS/Tailwind snippets.
+
+—🪜 EXECUTION PLAN —
+	1.	Analyze & Plan
+	•	Inspect current grid markup in public/index.html#user-feedback.
+	•	Decide whether to apply a background to the entire section, to alternating card backgrounds, or to inset panels behind groups of two.
+	2.	Gather Resources
+	•	Search for “mobile Tailwind alternating card backgrounds” and “WCAG AA contrast Tailwind” to find utility class patterns.
+	•	Identify Tailwind class names (e.g., bg-green-50, custom bg-[color], text-white) that match our brand palette.
+	3.	Implement Iteratively
+	•	Experiment with one approach (e.g., odd cards bg-green-50, even cards bg-orange-50, panel behind all cards bg-complementary-100).
+	•	Adjust text color (text-gray-900 vs. text-white) for readability.
+	•	Add appropriate padding, rounded corners, and drop shadows to maintain card “lift.”
+	4.	Test & Validate
+	•	Preview on mobile: check contrast ratios with aWCAG tools, ensure the section feels warm and inviting.
+	•	Run Lighthouse and accessibility audits for no regressions.
+	5.	Refine & Document
+	•	Tweak color shades or pattern (alternation, striping, inset) based on visual balance.
+	•	Update CHANGELOG.md under v0.3 with details of the color-scheme enhancement.
+
