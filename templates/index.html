@@ -812,239 +812,25 @@
         <!-- Contact Section -->
         <section id="contact" class="py-12 sm:py-16 md:py-20 lg:py-24 bg-white">
             <div class="max-w-4xl mx-auto px-4">
-                <div class="text-center mb-8 sm:mb-10 md:mb-12">
-                    <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-black mb-4 sm:mb-6">
+                <div class="text-center">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-black mb-6 sm:mb-8">
                         Contact Us – We Value Your Voice
                     </h2>
-                    <p class="text-base sm:text-lg md:text-xl text-black leading-relaxed max-w-2xl mx-auto">
-                        We welcome your feedback as we continuously improve our app to better serve expecting mothers. Your input helps us create a safer environment for you and your baby.
-                    </p>
-                </div>
-                
-                <div class="max-w-2xl mx-auto">
-                    <!-- Contact Form -->
-                    <div>
-                        <form x-data="contactForm()" @submit.prevent="submitForm()" class="space-y-6">
-                            <div>
-                                <label for="name" class="block text-sm font-medium text-black mb-2">
-                                    Full Name <span class="text-red-500">*</span>
-                                </label>
-                                <input type="text" 
-                                       id="name" 
-                                       x-model="form.name"
-                                       required
-                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors text-sm sm:text-base min-h-[44px] touch-manipulation"
-                                       :class="{'border-red-500': errors.name}"
-                                       placeholder="Your full name">
-                                <p x-show="errors.name" x-text="errors.name" class="mt-1 text-sm text-red-600"></p>
-                            </div>
-                            
-                            <div>
-                                <label for="email" class="block text-sm font-medium text-black mb-2">
-                                    Email Address <span class="text-red-500">*</span>
-                                </label>
-                                <input type="email" 
-                                       id="email" 
-                                       x-model="form.email"
-                                       required
-                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors text-sm sm:text-base min-h-[44px] touch-manipulation"
-                                       :class="{'border-red-500': errors.email}"
-                                       placeholder="your.email@example.com">
-                                <p x-show="errors.email" x-text="errors.email" class="mt-1 text-sm text-red-600"></p>
-                            </div>
-                            
-                            <div>
-                                <label for="subject" class="block text-sm font-medium text-black mb-2">
-                                    Subject <span class="text-red-500">*</span>
-                                </label>
-                                <select id="subject" 
-                                        x-model="form.subject"
-                                        required
-                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors text-sm sm:text-base min-h-[44px] touch-manipulation"
-                                        :class="{'border-red-500': errors.subject}">
-                                    <option value="">Select a topic</option>
-                                    <option value="app-support">App Support</option>
-                                    <option value="pregnancy-questions">Pregnancy Questions</option>
-                                    <option value="air-quality">Air Quality Concerns</option>
-                                    <option value="technical-issue">Technical Issue</option>
-                                    <option value="feedback">Feedback & Suggestions</option>
-                                    <option value="other">Other</option>
-                                </select>
-                                <p x-show="errors.subject" x-text="errors.subject" class="mt-1 text-sm text-red-600"></p>
-                            </div>
-                            
-                            <div>
-                                <label for="message" class="block text-sm font-medium text-black mb-2">
-                                    Message <span class="text-red-500">*</span>
-                                </label>
-                                <textarea id="message" 
-                                          x-model="form.message"
-                                          required
-                                          rows="5"
-                                          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors text-sm sm:text-base resize-vertical touch-manipulation"
-                                          :class="{'border-red-500': errors.message}"
-                                          placeholder="Please describe your question or concern in detail..."></textarea>
-                                <p x-show="errors.message" x-text="errors.message" class="mt-1 text-sm text-red-600"></p>
-                                <p class="mt-1 text-xs text-black">Maximum 500 characters</p>
-                            </div>
-                            
-                            <!-- Privacy Consent -->
-                            <div class="flex items-start">
-                                <input type="checkbox" 
-                                       id="privacy-consent"
-                                       x-model="form.consent"
-                                       required
-                                       class="mt-1 h-4 w-4 text-teal-600 focus:ring-teal-500 border-gray-300 rounded">
-                                <label for="privacy-consent" class="ml-3 text-sm text-black leading-tight">
-                                    I agree to the <a href="#policies" class="text-teal-deep hover:text-teal-800 underline">privacy policy</a> and consent to Mama Air contacting me about my inquiry.
-                                </label>
-                            </div>
-                            
-                            <!-- Submit Button -->
-                            <button type="submit" 
-                                    :disabled="isSubmitting"
-                                    class="w-full bg-teal-deep hover:bg-teal-800 disabled:bg-gray-400 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center min-h-[48px] touch-manipulation"
-                                    :class="{'cursor-not-allowed opacity-50': isSubmitting}">
-                                <span x-show="!isSubmitting">Send Message</span>
-                                <span x-show="isSubmitting" class="flex items-center">
-                                    <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                                    </svg>
-                                    Sending...
-                                </span>
-                            </button>
-                            
-                            <!-- Success/Error Messages -->
-                            <div x-show="showSuccess" 
-                                 x-transition:enter="transition ease-out duration-300"
-                                 x-transition:enter-start="opacity-0 transform translate-y-2"
-                                 x-transition:enter-end="opacity-100 transform translate-y-0"
-                                 class="bg-green-50 border border-green-200 rounded-lg p-4">
-                                <div class="flex items-center">
-                                    <i class="fas fa-check-circle text-green-600 mr-3"></i>
-                                    <div>
-                                        <h4 class="font-semibold text-green-800 text-sm">Message Sent Successfully!</h4>
-                                        <p class="text-green-700 text-sm">Thank you for contacting us. We'll respond within 24 hours.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div x-show="showError" 
-                                 x-transition:enter="transition ease-out duration-300"
-                                 x-transition:enter-start="opacity-0 transform translate-y-2"
-                                 x-transition:enter-end="opacity-100 transform translate-y-0"
-                                 class="bg-red-50 border border-red-200 rounded-lg p-4">
-                                <div class="flex items-center">
-                                    <i class="fas fa-exclamation-circle text-red-600 mr-3"></i>
-                                    <div>
-                                        <h4 class="font-semibold text-red-800 text-sm">Error Sending Message</h4>
-                                        <p class="text-red-700 text-sm">Please try again or email us directly at support@mamaair.app</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
+                    <div class="max-w-3xl mx-auto space-y-4 sm:space-y-6">
+                        <p class="text-base sm:text-lg md:text-xl text-black leading-relaxed">
+                            We welcome your feedback as we continuously improve our app to best support our users.
+                        </p>
+                        <p class="text-base sm:text-lg md:text-xl text-black leading-relaxed">
+                            Please share your thoughts on app features or any other ideas and suggestions using the feedback form here or by sending us an email at <a href="mailto:support@mamaair.app" class="underline hover:no-underline">support@mamaair.app</a>.
+                        </p>
+                        <p class="text-base sm:text-lg md:text-xl text-black leading-relaxed">
+                            Together, we create a healthier tomorrow for mothers and babies across world.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
-        
-        <script>
-            function contactForm() {
-                return {
-                    form: {
-                        name: '',
-                        email: '',
-                        subject: '',
-                        message: '',
-                        consent: false
-                    },
-                    errors: {},
-                    isSubmitting: false,
-                    showSuccess: false,
-                    showError: false,
-                    
-                    validateForm() {
-                        this.errors = {};
-                        
-                        if (!this.form.name.trim()) {
-                            this.errors.name = 'Name is required';
-                        }
-                        
-                        if (!this.form.email.trim()) {
-                            this.errors.email = 'Email is required';
-                        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.form.email)) {
-                            this.errors.email = 'Please enter a valid email address';
-                        }
-                        
-                        if (!this.form.subject) {
-                            this.errors.subject = 'Please select a subject';
-                        }
-                        
-                        if (!this.form.message.trim()) {
-                            this.errors.message = 'Message is required';
-                        } else if (this.form.message.length > 500) {
-                            this.errors.message = 'Message must be 500 characters or less';
-                        }
-                        
-                        return Object.keys(this.errors).length === 0;
-                    },
-                    
-                    async submitForm() {
-                        if (!this.validateForm() || !this.form.consent) {
-                            return;
-                        }
-                        
-                        this.isSubmitting = true;
-                        this.showSuccess = false;
-                        this.showError = false;
-                        
-                        try {
-                            // Simulate form submission (replace with actual endpoint)
-                            await new Promise(resolve => setTimeout(resolve, 2000));
-                            
-                            // Track form submission
-                            if (typeof gtag !== 'undefined') {
-                                gtag('event', 'contact_form_submit', {
-                                    'subject': this.form.subject,
-                                    'message_length': this.form.message.length
-                                });
-                            }
-                            
-                            this.showSuccess = true;
-                            this.resetForm();
-                            
-                            // Hide success message after 5 seconds
-                            setTimeout(() => {
-                                this.showSuccess = false;
-                            }, 5000);
-                            
-                        } catch (error) {
-                            console.error('Form submission error:', error);
-                            this.showError = true;
-                            
-                            // Hide error message after 5 seconds
-                            setTimeout(() => {
-                                this.showError = false;
-                            }, 5000);
-                        }
-                        
-                        this.isSubmitting = false;
-                    },
-                    
-                    resetForm() {
-                        this.form = {
-                            name: '',
-                            email: '',
-                            subject: '',
-                            message: '',
-                            consent: false
-                        };
-                        this.errors = {};
-                    }
-                }
-            }
-        </script>
+
     </main>
 
     <!-- Footer -->

@@ -1,0 +1,59 @@
+Ok , now next prompt for contact block
+1. We need exactly black text
+2. Fully delete get in touch block
+
+So edit prompt for next task
+
+—you are a Replit AI coding agent—  
+1️⃣ You must keep going until the query is fully resolved. Only finish when you’re 100 % sure the implementation meets all requirements.  
+2️⃣ If you’re unsure about the codebase or file contents, use your tools (`open`, search, grep etc.) to inspect—never guess.  
+3️⃣ Before each action, plan your approach in 2–3 bullet points. After each code change, reflect on results and decide next steps.
+
+—🗂 CONTEXT —  
+• Task: {High-level description of what to build or fix:
+
+Iterate a one-page mobile landing for MamaAir.app from v0.1 to v0.2 based on feedback from client
+
+Task: Update the “Contact Us – We Value Your Voice” block from v0.1 → v0.2 per client feedback:  
+  1. Apply the exact text "Contact Us – We Value Your Voice
+
+We welcome your feedback as we continuously improve our app to best support our users.
+
+Please share your thoughts on app features or any other ideas and suggestions using the feedback form here or by sending us an email at support@mamair.app.
+
+Together, we create a healthier tomorrow for mothers and babies across world."
+  2. Remove the entire form under text
+
+
+
+
+}  
+• Inputs: { tech task from client in odt file, + screenshot from this file to focus on task in this file
+
+}  
+• Constraints: {e.g. “≤100 KB initial payload”, “use Tailwind v3 + Alpine.js”, “mobile-first”}  
+• KPI / success: {e.g. “CTR ≥8 % on Play badge”, “LCP ≤2.5 s”, “Lighthouse ≥90”}
+
+—🔍 RESEARCH —  
+Use internet search to deeply explore:  
+  • GitHub for similar reference projects or components  
+  • HackerNoon, Medium, official docs for best practices  
+  • NPM, CDN, or plugin repos for lightweight libraries  
+Collect 2–3 ideal examples or code snippets before coding.
+
+—🪜 EXECUTION PLAN —  
+1. Analyze & Plan  
+   - Summarize key requirements  
+   - List sub-tasks (e.g., header→hero→features→footer)  
+2. Gather Resources  
+   - Fetch code examples or libraries via web search  
+   - Note installation or import instructions  
+3. Implement Iteratively  
+   - Checkpoint after each section (e.g., header done)  
+   - Write minimal, testable code for that section  
+4. Test & Validate  
+   - Smoke-test functionality (manual or automated)  
+   - Validate performance & accessibility  
+5. Refine & Document  
+   - Tweak styles, fix edge-cases  
+   - Comment & update README with setup
