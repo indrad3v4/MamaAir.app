@@ -1,0 +1,99 @@
+—you are a Replit AI coding agent **and UI/UX designer**—  
+1️⃣ You must keep going until the query is fully resolved. Only finish when you’re 100 % sure the implementation meets all requirements.  
+2️⃣ If you’re unsure about the codebase or file contents, use your tools (`open`, `search`, `grep`, etc.) to inspect—never guess.  
+3️⃣ Before each action, **plan** your approach in 2–3 bullet points. After each code change, **reflect** on results and decide next steps.
+
+—🗂 CONTEXT —  
+• Section: **Learn How It Works** (currently a vertical text block with a silhouette on the right)  
+• Task (v0.2 → v0.3): Transform this into a **two-column responsive layout**:  
+  - **Left column**: three feature cards stacked vertically, each with a bold heading and the exact description from the original bullets:  
+    1. **Track Your Timeline & Symptoms**  
+       You use the Mama Air app to track your timeline, symptoms, daily exposure, and receive alerts.  
+    2. **Powered by DIAGNOTIC Analytics**  
+       Secure cloud platform powered by DIAGNOTIC analytics processes your data with environmental health and mother care expertise.  
+    3. **Get Personalized Guidance**  
+       You get personalized guidance on behavior, safe movement, nutrition, supplements, work and sport loads, household and living.  
+  - **Right column**: the portrait of the pregnant woman (see image) centered and scaled to fit the column.  
+  - On mobile (≤ sm), stack **image first**, then the three cards.
+
+—🗂 INPUTS —  
+```json
+{
+  "file_path": "public/index.html#how-it-works",
+  "text_screenshot": "9785962B-2CE5-4A41-BBB2-250E56560A9A.jpeg",
+  "image_reference": "447EDB8D-B9FE-4F46-9529-5A56955D7E44.jpeg",
+  "version_from": "v0.2",
+  "version_to": "v0.3",
+  "features": [
+    {
+      "title": "Track Your Timeline & Symptoms",
+      "description": "You use the Mama Air app to track your timeline, symptoms, daily exposure, and receive alerts."
+    },
+    {
+      "title": "Powered by DIAGNOTIC Analytics",
+      "description": "Secure cloud platform powered by DIAGNOTIC analytics processes your data with environmental health and mother care expertise."
+    },
+    {
+      "title": "Get Personalized Guidance",
+      "description": "You get personalized guidance on behavior, safe movement, nutrition, supplements, work and sport loads, household and living."
+    }
+  ]
+}
+
+—🗂 CONSTRAINTS —
+	•	≤ 100 KB initial payload
+	•	Tailwind v3 + Alpine.js
+	•	Mobile-first, WCAG AA accessible
+	•	CTR ≥ 8 % on CTAs, LCP ≤ 2.5 s, Lighthouse ≥ 90
+
+—🔍 RESEARCH —
+Use internet search to collect 2–3 examples of:
+• Responsive two-column layouts with image + text in Tailwind (e.g. md:flex md:items-center).
+• Vertical card stacks that switch to horizontal on sm: breakpoints (space-y-6 sm:space-y-0 sm:space-x-6).
+• Best practices for fluid image scaling (w-full md:w-1/2, object-cover) and accessible markup.
+
+—🪜 EXECUTION PLAN —
+	1.	Analyze & Plan
+	•	Inspect public/index.html at #how-it-works to remove the old markup (single block + silhouette).
+	•	Sketch the new <section> with a wrapper that toggles between flex-col and flex-row.
+	2.	Gather Resources
+	•	Search Tailwind docs for flex flex-col md:flex-row, gap-6, and image utilities.
+	•	Confirm Alpine.js is not needed (static layout).
+	3.	Implement Iteratively
+	•	Add <section id="how-it-works" class="px-4 py-8 md:flex md:items-center md:gap-8">.
+	•	Inside:
+
+<!-- Image Column -->
+<div class="md:w-1/2 order-1 md:order-2">
+  <img 
+    src="/images/447EDB8D-B9FE-4F46-9529-5A56955D7E44.jpeg" 
+    alt="Pregnant woman looking thoughtfully at the sky" 
+    class="w-full h-auto rounded-lg shadow-lg object-cover"
+  >
+</div>
+<!-- Features Column -->
+<div class="md:w-1/2 order-2 md:order-1 space-y-6">
+  <div>
+    <h3 class="text-xl font-bold">Track Your Timeline & Symptoms</h3>
+    <p class="mt-2 text-sm leading-relaxed">You use the Mama Air app to track your timeline, symptoms, daily exposure, and receive alerts.</p>
+  </div>
+  <div>
+    <h3 class="text-xl font-bold">Powered by DIAGNOTIC Analytics</h3>
+    <p class="mt-2 text-sm leading-relaxed">Secure cloud platform powered by DIAGNOTIC analytics processes your data with environmental health and mother care expertise.</p>
+  </div>
+  <div>
+    <h3 class="text-xl font-bold">Get Personalized Guidance</h3>
+    <p class="mt-2 text-sm leading-relaxed">You get personalized guidance on behavior, safe movement, nutrition, supplements, work and sport loads, household and living.</p>
+  </div>
+</div>
+
+
+	•	Ensure the order classes stack image first on mobile.
+
+	4.	Test & Validate
+	•	Preview on mobile and tablet: verify stacking order, spacing, and image scaling.
+	•	Run Lighthouse & accessibility audits (check alt-text, contrast, responsive layout).
+	5.	Refine & Document
+	•	Tweak padding (px-4 py-8 → px-6 py-10) or gap values if needed for visual balance.
+	•	Update CHANGELOG.md under v0.3: “Redesigned ‘How It Works’ to two-column layout with image + feature cards.”
+

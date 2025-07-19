@@ -258,7 +258,7 @@
             </div>
         </section>
 
-        <!-- How Section -->
+        <!-- How It Works Section - Two Column Layout -->
         <section id="how" class="py-12 sm:py-16 md:py-20 lg:py-24 bg-neutral-50">
             <div class="max-w-6xl mx-auto px-4">
                 <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-800 mb-3 sm:mb-4 text-center">
@@ -268,58 +268,49 @@
                     Just 3 simple steps to solve your concerns about air quality during pregnancy
                 </p>
                 
-                <div class="flex flex-col lg:flex-row items-center justify-center gap-8 md:gap-12 lg:gap-16">
-                    <div class="text-center lg:w-1/3 group">
-                        <div class="w-16 sm:w-18 md:w-20 h-16 sm:h-18 md:h-20 bg-gradient-to-br from-teal-deep to-teal-800 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                            <span class="text-xl sm:text-2xl md:text-3xl font-extrabold text-white">1</span>
+                <!-- Two Column Responsive Layout -->
+                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                    
+                    <!-- Image Column - Order 1 on mobile, Order 2 on desktop -->
+                    <div class="w-full md:w-1/2 order-1 md:order-2">
+                        <img 
+                            src="/static/pregnant-woman-portrait.jpeg" 
+                            alt="Pregnant woman looking thoughtfully at the sky, representing hope and care for her baby's health" 
+                            class="w-full h-auto rounded-lg shadow-lg object-cover max-w-md mx-auto"
+                        >
+                    </div>
+                    
+                    <!-- Features Column - Order 2 on mobile, Order 1 on desktop -->
+                    <div class="w-full md:w-1/2 order-2 md:order-1 space-y-6">
+                        
+                        <!-- Feature Card 1 -->
+                        <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                            <h3 class="text-xl font-bold text-slate-800 mb-3">Track Your Timeline & Symptoms</h3>
+                            <p class="text-sm leading-relaxed text-slate-600">
+                                You use the Mama Air app to track your timeline, symptoms, daily exposure, and receive alerts.
+                            </p>
                         </div>
-                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-slate-800 mb-2 sm:mb-3 leading-tight max-w-xs mx-auto">
-                            Track your timeline, symptoms & environment
-                        </h3>
-                        <p class="text-sm sm:text-base text-slate-600 leading-relaxed max-w-sm mx-auto">
-                            Monitor your pregnancy journey and local air quality conditions in real-time
-                        </p>
-                    </div>
-                    
-                    <!-- Mobile Arrow Connector -->
-                    <div class="lg:hidden flex justify-center">
-                        <div class="w-px h-8 bg-gradient-to-b from-teal-deep/30 to-teal-deep/10"></div>
-                        <i class="fas fa-arrow-down text-teal-deep/50 mx-2"></i>
-                        <div class="w-px h-8 bg-gradient-to-b from-teal-deep/10 to-transparent"></div>
-                    </div>
-                    
-                    <div class="text-center lg:w-1/3 group">
-                        <div class="w-16 sm:w-18 md:w-20 h-16 sm:h-18 md:h-20 bg-gradient-to-br from-teal-deep to-teal-800 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                            <span class="text-xl sm:text-2xl md:text-3xl font-extrabold text-white">2</span>
+                        
+                        <!-- Feature Card 2 -->
+                        <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                            <h3 class="text-xl font-bold text-slate-800 mb-3">Powered by DIAQNOSTIC Analytics</h3>
+                            <p class="text-sm leading-relaxed text-slate-600">
+                                Secure cloud platform powered by DIAQNOSTIC analytics processes your data with environmental health and mother care expertise.
+                            </p>
                         </div>
-                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-slate-800 mb-2 sm:mb-3 leading-tight max-w-xs mx-auto">
-                            Analyze via DIAQNOSTIC cloud platform
-                        </h3>
-                        <p class="text-sm sm:text-base text-slate-600 leading-relaxed max-w-sm mx-auto">
-                            Advanced AI processes your data to identify health patterns and risks
-                        </p>
-                    </div>
-                    
-                    <!-- Mobile Arrow Connector -->
-                    <div class="lg:hidden flex justify-center">
-                        <div class="w-px h-8 bg-gradient-to-b from-teal-deep/30 to-teal-deep/10"></div>
-                        <i class="fas fa-arrow-down text-teal-deep/50 mx-2"></i>
-                        <div class="w-px h-8 bg-gradient-to-b from-teal-deep/10 to-transparent"></div>
-                    </div>
-                    
-                    <div class="text-center lg:w-1/3 group">
-                        <div class="w-16 sm:w-18 md:w-20 h-16 sm:h-18 md:h-20 bg-gradient-to-br from-teal-deep to-teal-800 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                            <span class="text-xl sm:text-2xl md:text-3xl font-extrabold text-white">3</span>
+                        
+                        <!-- Feature Card 3 -->
+                        <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-300">
+                            <h3 class="text-xl font-bold text-slate-800 mb-3">Get Personalized Guidance</h3>
+                            <p class="text-sm leading-relaxed text-slate-600">
+                                You get personalized guidance on behavior, safe movement, nutrition, supplements, work and sport loads, household and living.
+                            </p>
                         </div>
-                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-slate-800 mb-2 sm:mb-3 leading-tight max-w-xs mx-auto">
-                            Receive personalized guidance
-                        </h3>
-                        <p class="text-sm sm:text-base text-slate-600 leading-relaxed max-w-sm mx-auto">
-                            Get tailored recommendations to keep you and your baby safe and healthy
-                        </p>
+                        
                     </div>
                 </div>
                 
+                <!-- DIAQNOSTIC Attribution -->
                 <div class="text-center mt-8 sm:mt-10 md:mt-12">
                     <div class="inline-flex items-center bg-white px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow-sm border">
                         <span class="text-xs sm:text-sm text-slate-600 mr-2">Powered by</span>

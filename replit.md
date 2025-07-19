@@ -10,6 +10,17 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes (Latest Session - July 19, 2025)
 
+### "How It Works" Section Redesign v0.2 → v0.3 (July 19, 2025)
+- **Two-Column Responsive Layout**: Transformed from vertical numbered steps to responsive two-column design
+  - Left column: Three feature cards stacked vertically with exact client-specified content
+  - Right column: Portrait of pregnant woman (centered and scaled to fit column)
+  - Mobile-first design: Image first, then cards on mobile (≤ md), side-by-side on desktop
+  - Feature cards with exact descriptions: "Track Your Timeline & Symptoms", "Powered by DIAQNOSTIC Analytics", "Get Personalized Guidance"
+  - Enhanced with card hover effects (shadow-sm to shadow-md transitions)
+  - Responsive image with proper alt text for accessibility and SEO optimization
+  - Maintained DIAQNOSTIC attribution and brand consistency with existing design
+  - Used flex flex-col md:flex-row pattern with order classes for optimal mobile UX
+
 ### Footer Simplification v0.1 to v0.2 (July 19, 2025)
 - **Minimalist Footer Design**: Updated landing page footer per client feedback
   - Kept only brand message: "Breathe with Confidence. Act with Support. Mama Air."
